@@ -1,0 +1,109 @@
+import Page from '../page';
+
+//sub page containing specific selectors and methods for a specific page
+class FormTradeProgramPage extends Page {
+
+    //define selectors using getter methods
+    get titlePage () { return $('#headerTradeProgram') }
+    get options () { return $$('#options') }
+
+    get dropdownGroupTradeProgram () { return $('[formcontrolname="group_trade_program"]') }
+    get searchGroupTradeProgram () { return $('[placeholder="Cari Group Trade Program..."]') }   //masih pakai default id Angular
+    get selectGroupTradeProgram () { return $$('[role="option"]') }
+    get dropdownSubGroupTradeProgram () { return $('mat-select[formcontrolname="sub_group_trade_program"]') }
+    get searchSubGroupTradeProgram () { return $('[placeholder="Cari Sub Group Trade Program..."]') }   //masih pakai default id Angular
+    get selectSubGroupTradeProgram () { return $$('[role="option"]') }
+    get namaTradeProgram () { return $('[formcontrolname="name"]') }   //masih pakai default id Angular
+
+    get previewBanner () { return $('#previewBanner') }
+    get inputFileBanner () { return $('#upload-file-trade') }
+
+    get dropdownGroupAudience () { return $('#trade_audience_group_id') }
+    get searchGroupAudience () { return $('#mat-input-15') }   //masih pakai default id Angular
+    get selectGroupAudience () { return $('') }
+
+    get startDate () { return $('input[formcontrolname="start_date"]') }
+    get endDate () { return $('input[formcontrolname="end_date"]') }
+    get popUpCalendar () { return $('tbody.mat-calendar-body') }
+
+    get danaTradeProgram () { return $('input[formcontrolname="budget"]') }   //masih pakai default id Angular
+    get expiredCoin () { return $('input[formcontrolname="coin_expiry_date"]') }   //masih pakai default id Angular
+
+    get btnSimpan () { return $('#btn-simpan-trade') }
+    get btnCekDetail () { return $('') }
+
+    //a method to encapsule automation code to interact with the page
+    async page () {
+        await browser.waitUntil(
+            async () => (await (this.titlePage).isDisplayed()),
+            {
+                timeout: 10000,
+                timeoutMsg: 'expected title page not displayed after 10s'
+            }
+        )
+        await expect(this.titlePage).toBeDisplayed({timeout:6000})
+    }
+
+    async pageCreate () {
+        await expect(this.titlePage).toHaveText('Buat Trade Program')
+        await expect(browser).toHaveUrlContaining('dte/trade-program/create')
+        await browser.pause(2000)
+    }
+
+    async pageEdit () {
+        await expect(this.titlePage).toHaveText('Ubah Trade Program')
+        await expect(browser).toHaveUrlContaining('dte/trade-program/edit')
+    }
+
+    async pageDetail () {
+        await expect(this.titlePage).toHaveText('Detail Trade Program')
+        await expect(browser).toHaveUrlContaining('dte/trade-program/detail')
+    }
+
+    async createTP (namaGTP, namaSGTP, namaTP, danaTP) {
+        await browser.pause(10000)
+        await this.dropdownGroupTradeProgram.scrollIntoView()
+        await browser.pause(1500)
+        await this.dropdownGroupTradeProgram.click()
+        await this.searchGroupTradeProgram.waitForExist()
+        await this.searchGroupTradeProgram.setValue(namaGTP)
+        await browser.pause(3000)
+        await this.selectGroupTradeProgram[0].click()
+        await this.searchGroupTradeProgram.waitForExist({ reverse: true });
+        await this.dropdownSubGroupTradeProgram.click()
+        await this.searchSubGroupTradeProgram.waitForExist()
+        await this.searchSubGroupTradeProgram.setValue(namaSGTP)
+        await browser.pause(3000)
+        await this.selectSubGroupTradeProgram[0].click()
+        await this.searchSubGroupTradeProgram.waitForExist({ reverse: true });
+        await this.namaTradeProgram.scrollIntoView()
+        await this.namaTradeProgram.setValue(namaTP)
+        await this.startDate.click()
+        await this.popUpCalendar.$$('tr')[4].$$('td')[3].$('div').click() // 0-6 Senin-Minggu, contoh: 3,0: 17 Januari 2022
+        await this.popUpCalendar.waitForExist({ reverse: true });
+        await this.endDate.click()
+        await this.popUpCalendar.$$('tr')[4].$$('td')[6].$('div').click() // 0-6, baris x kolom, contoh: 5,0: 31 Januari 2022
+        await this.popUpCalendar.waitForExist({ reverse: true });
+        await this.danaTradeProgram.setValue(danaTP)
+        await this.expiredCoin.click()
+        await this.popUpCalendar.$$('tr')[4].$$('td')[6].$('div').click()
+        await this.popUpCalendar.waitForExist({ reverse: true });
+        await browser.pause(3000)
+    }
+
+    async submit () {
+        await expect(this.btnSimpan).toBeClickable()
+        await this.btnSimpan.click()
+    }
+
+    async cekDetail () {
+        await this.btnCekDetail.click()
+    }
+
+    //overwrite specifc options to adapt it to page object
+    open () {
+        return super.open('');
+    }
+}
+
+export default new FormTradeProgramPage();
