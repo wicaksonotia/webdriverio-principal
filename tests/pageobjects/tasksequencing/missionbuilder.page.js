@@ -1,4 +1,5 @@
 import Page from "../page";
+import { setStartEndDate } from "../../helper/commands";
 
 //sub page containing specific selectors and methods for a specific page
 class MissionBuilderPage extends Page {
@@ -172,7 +173,6 @@ class MissionBuilderPage extends Page {
     await expect(this.titlePage).toHaveText("Detil Mission Builder");
     await expect(browser).toHaveUrlContaining("dte/mission-builder/detail");
     await browser.pause(2000);
-    // await expect(this.namaTsm).toHaveText(nameTSM)
   }
 
   async createMissionBuilder() {
@@ -188,16 +188,6 @@ class MissionBuilderPage extends Page {
     await browser.pause(3000);
   }
 
-  async MissionBuilder2() {
-    await this.cardMissionEdit.waitForClickable();
-    await expect(this.cardMissionEdit).toBeClickable();
-    await this.cardMissionEdit.click();
-    await this.btnSimpanSetMisi.waitForClickable();
-    await expect(this.btnSimpanSetMisi).toBeClickable();
-    await this.btnSimpanSetMisi.click();
-    //await browser.pause(3000)
-    await this.headerCardMission.waitForDisplayed({ reverse: true });
-  }
   async setMission() {
     await this.cardMission.waitForClickable();
     await expect(this.cardMission).toBeClickable();
@@ -228,51 +218,25 @@ class MissionBuilderPage extends Page {
     await expect(this.selectTemplateMisi[0].$("span")).toHaveText(templateMisi);
     await this.selectTemplateMisi[0].click();
     await browser.pause(5000);
-    /*await this.dropdownNamaLainMisi.click()
-        await this.searchNamaLainMisi.setValue(namaLainMisi)
-        await browser.pause(3000)
-        await this.selectNamaLainMisi.click()*/
+    // await this.dropdownNamaLainMisi.click();
+    // await this.searchNamaLainMisi.setValue(namaLainMisi);
+    // await browser.pause(3000);
+    // await this.selectNamaLainMisi.click();
 
-    //untuk scenario 16
-    // await this.startDate.click();
-    // await this.popUpCalendar.waitForExist();
-    // await this.popUpCalendar.$$('tr')[3].$$('td')[4].$('div').click(); //baris x kolom , contoh: 1,4: 6 Januari 2022
-    // await this.startTime.click()
-    // await this.popUpTimeStart.waitForExist();
-    // await this.popUpTimeStart.$$('div')[2].$('span').click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
-    // await this.btnTimePicker[1].click()
-
-    // await this.endDate.click();
-    // await this.popUpCalendar.$$('tr')[3].$$('td')[4].$('div').click(); //baris x kolom , contoh: 1,4: 6 Januari 2022
-    // await this.endTime.click()
-    // await this.popUpTimeEnd.waitForExist();
-    // await this.popUpTimeEnd.$$('div')[9].$('span').click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
-    // await this.btnTimePicker[1].click()
-
-    //untuk scenario 4 5 17 18 19 42 47 53
-    await this.startDate.click();
-    await this.popUpCalendar.waitForExist();
-    await browser.pause(1500);
-    await this.popUpCalendar.$$("tr")[2].$$("td")[1].$("div").click(); //baris x kolom , contoh: 1,4: 6 Januari 2022
-    await browser.pause(1500);
+    await setStartEndDate(this.startDate, this.endDate, this.popUpCalendar);
     await this.startTime.click();
+    await browser.pause(3000);
     await this.popUpTimeStart.waitForExist();
-    await browser.pause(1500);
-    await this.popUpTimeStart.$$("div")[2].$("span").click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
-    await browser.pause(1500);
+    await this.popUpTimeStart.$$("div")[2].$("span").click();
     await this.btnTimePicker[1].click();
+    await browser.pause(3000);
 
-    await this.endDate.click();
-    await this.popUpCalendar.waitForExist();
-    await browser.pause(1500);
-    await this.popUpCalendar.$$("tr")[3].$$("td")[1].$("div").click(); //contoh: 4,6: 29 Januari 2022
-    await browser.pause(1500);
     await this.endTime.click();
+    await browser.pause(3000);
     await this.popUpTimeEnd.waitForExist();
-    await browser.pause(1500);
-    await this.popUpTimeEnd.$$("div")[9].$("span").click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
-    await browser.pause(1500);
+    await this.popUpTimeEnd.$$("div")[9].$("span").click();
     await this.btnTimePicker[1].click();
+    await browser.pause(3000);
   }
   //Scenario 19
   async setPushToFF() {
@@ -312,7 +276,6 @@ class MissionBuilderPage extends Page {
     await expect(this.btnSimpanSetMisi).toBeClickable();
     await this.btnSimpanSetMisi.click();
     await browser.pause(3000);
-    await this.headerCardMission.waitForDisplayed({ reverse: true });
   }
 
   async batalSettingMission() {

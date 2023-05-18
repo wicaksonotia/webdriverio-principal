@@ -41,68 +41,68 @@ exports.config = {
     //'./tests/features/login/1login-external.feature'
     // "./tests/features/tasksequencing/53createtsm1000kaudience.feature",
     // "./tests/features/tasksequencing/42createtsm-xp.feature",
-    // './tests/features/tasksequencing/47createtsmwithplanogrammission.feature'
-    // './tests/features/tasksequencing/4createtsm-pinupmission.feature'
-    // './tests/features/tasksequencing/5createtsm-without-pinupmission.feature'
-    // './tests/features/tasksequencing/17createmissiontaskbasedresponse.feature'
-    // './tests/features/tasksequencing/18createquizmission.feature'
-    // './tests/features/tasksequencing/19createtaskbasedresponse-pushtoff.feature'
-    // './tests/features/tasksequencing/16createmission-ir-tsm.feature'
-    // './tests/features/tasksequencing/26publish-tsm.feature'
+    // "./tests/features/tasksequencing/47createtsmwithplanogrammission.feature",
+    // "./tests/features/tasksequencing/4createtsm-pinupmission.feature",
+    // "./tests/features/tasksequencing/5createtsm-without-pinupmission.feature",
+    // "./tests/features/tasksequencing/17createmissiontaskbasedresponse.feature",
+    // "./tests/features/tasksequencing/18createquizmission.feature",
+    // "./tests/features/tasksequencing/19createtaskbasedresponse-pushtoff.feature",
+    // "./tests/features/tasksequencing/16createmission-ir-tsm.feature",
+    // "./tests/features/tasksequencing/26publish-tsm.feature",
     // './tests/features/tasksequencing/28unpublish-tsm.feature'
-    // './tests/features/tasksequencing/6exportimportcoin.feature' //export & import
-    // './tests/features/tasksequencing/27requestapproval-coinadjustment.feature' //import, sama dengan scenario 6
-    // './tests/features/templatetugas/2createtemplatemission-custombackground.feature' //manual saat upload image
-    // './tests/features/templatetugas/3createtemplatemission-backgrounddefault.feature'
-    //'./tests/features/templatetugas/29importimage.feature' //manual saat upload image
+    // "./tests/features/tasksequencing/6exportimportcoin.feature", //export & import
+    // "./tests/features/tasksequencing/27requestapproval-coinadjustment.feature", //import, sama dengan scenario 6
+    // "./tests/features/templatetugas/2createtemplatemission-custombackground.feature", //manual saat upload image
+    // "./tests/features/templatetugas/3createtemplatemission-backgrounddefault.feature",
+    // "./tests/features/templatetugas/29importimage.feature", //manual saat upload image
     // './tests/features/templatetugas/30importvideo.feature' //manual saat upload video
-    // './tests/features/templatetugas/31selectattributemisi.feature'
+    // "./tests/features/templatetugas/31selectattributemisi.feature",
     // './tests/features/templatetugas/32selectpertanyaan.feature'
     // './tests/features/templatetugas/33sharablelink.feature'
-    // './tests/features/templatetugas/46templatetugasplanogram.feature'
-    // './tests/features/templatetugas/49templatetugasupc.feature'
-    // './tests/features/templatetugas/55templatetugastbrsemua.feature'
-    // './tests/features/produk/56createproductupc.feature' //import gambar manual
-    // './tests/features/audience/8export-import.feature' //manual saat upload file
-    // './tests/features/audience/50importaudiencepersonalize.feature' //manual saat upload file
-    // './tests/features/audience/51import200kaudiencepersonalize.feature' //manual saat upload file
+    // "./tests/features/templatetugas/46templatetugasplanogram.feature",
+    // "./tests/features/templatetugas/49templatetugasupc.feature",
+    // "./tests/features/templatetugas/55templatetugastbrsemua.feature",
+    // "./tests/features/produk/56createproductupc.feature", //import gambar manual
+    // "./tests/features/audience/8export-import.feature", //manual saat upload file
+    // "./tests/features/audience/50importaudiencepersonalize.feature", //manual saat upload file
+    // "./tests/features/audience/51import200kaudiencepersonalize.feature", //manual saat upload file
     // './tests/features/audience/52import1000kaudiencenonpersonalize.feature' //manual saat upload file
-    // './tests/features/audience/57createaudiencemitranonpersonalize.feature' //manual saat upload file
-    // './tests/features/approvalcoinadjustment/9approve.feature'
-    // './tests/features/approvalcoinadjustment/10reject.feature'
-    // './tests/features/coinredemptionapproval/39rejectrequest.feature'  //pakai cron
+    // "./tests/features/audience/57createaudiencemitranonpersonalize.feature", //manual saat upload file
+    // "./tests/features/approvalcoinadjustment/9approve.feature",
+    // "./tests/features/approvalcoinadjustment/10reject.feature",
+    // "./tests/features/coinredemptionapproval/39rejectrequest.feature", //pakai cron
     // './tests/features/coinredemptionapproval/37approverequest.feature' // pakai cron
-    // './tests/features/coindisbursement/38uploadresultpayment.feature'// manual upload file
-    // './tests/features/coindisbursement/13publish-coindisbursement.feature'
+    // "./tests/features/coindisbursement/38uploadresultpayment.feature", // manual upload file
+    // "./tests/features/coindisbursement/13publish-coindisbursement.feature",
     // './tests/features/coindisbursement/15unpublish-coindisbursement.feature'
-    // './tests/features/coindisbursement/14setupprogrampenukarancoinPB.feature'
+    // "./tests/features/coindisbursement/14setupprogrampenukarancoinPB.feature",
     // './tests/features/coindisbursement/14setupprogrampenukarancoinTB.feature'
-    // './tests/features/dteautomation/20digitalcoupon-nontsm.feature' //create TP dan Audience dulu
+    // "./tests/features/dteautomation/20digitalcoupon-nontsm.feature", //create TP dan Audience dulu
     // './tests/features/dteautomation/21digitalcoupon-tsm.feature' //create TP dan Audience dulu
     // './tests/features/dteautomation/22eorder-nontsm.feature' //create TP dan Audience dulu
     // './tests/features/dteautomation/23eorder-tsm.feature' //create TP dan Audience dulu
     // './tests/features/dteautomation/24referralcode-nontsm.feature' //create TP dan Audience dulu
     // './tests/features/dteautomation/25referralcode-tsm.feature'  //create TP dan Audience dulu
-    // './tests/features/employeemapping/34crudemployeemappingpb.feature'
-    //'./tests/features/employeemapping/35crudemployeemappingtb.feature'
-    // './tests/features/subgtp/36crudsubgtp.feature'
+    // "./tests/features/employeemapping/34crudemployeemappingpb.feature",
+    // './tests/features/employeemapping/35crudemployeemappingtb.feature'
+    // "./tests/features/subgtp/36crudsubgtp.feature",
     // "./tests/features/taskverification2.0/40taskverification2.0.feature", //edit tanggal deadline assignment
     // './tests/features/taskverification2.0/58taskverificationmitra.feature' //edit tanggal deadline assignment
     // './tests/features/taskverification2.0/54importverificationassignment150kdata.feature' //siapin task verifnya dulu
-    // './tests/features/xp/43crudxp-audiencefixedpanel.feature' //edit startDate dan endDate, manual import sampe submit dialog
-    // './tests/features/xp/44createxp-audiencepopulationblast.feature' //edit startDate dan endDate, manual import sampe submit dialog
-    // './tests/features/spinthewheel/41crudespinthewheel-audiencefixedpanel.feature' // upload data manual
+    // "./tests/features/xp/43crudxp-audiencefixedpanel.feature", //edit startDate dan endDate, manual import sampe submit dialog
+    // "./tests/features/xp/44createxp-audiencepopulationblast.feature", //edit startDate dan endDate, manual import sampe submit dialog
+    // "./tests/features/spinthewheel/41crudespinthewheel-audiencefixedpanel.feature", // upload data manual
     // './tests/features/spinthewheel/41crudespinthewheel-audiencepopulationblast.feature'
-    // './tests/features/imagerecognition/45irtemplateplanogram.feature' //upload image
-    // './tests/features/imagerecognition/48ir-checkimage.feature' //upload image
+    // "./tests/features/imagerecognition/45irtemplateplanogram.feature", //upload image
+    // "./tests/features/imagerecognition/48ir-checkimage.feature", //upload image
     // "./tests/features/calltoaction/59crudcta.feature", //upload file
-    //'./tests/features/calltoaction/62ctacustomized.feature' //upload file
-    // './tests/features/principalnotesforretailer/61principalnotesforretailer.feature'  //edit date
-    // './tests/features/fieldforce/60fieldforce.feature'
+    // "./tests/features/calltoaction/62ctacustomized.feature", //upload file
+    // "./tests/features/principalnotesforretailer/61principalnotesforretailer.feature", //edit date
+    // "./tests/features/fieldforce/60fieldforce.feature",
     //spanduk_online ada import gambar manual
     // "./tests/features/spanduk_online/01banner(inapp-reguler).feature",
-    //'./tests/features/spanduk_online/02banner(toko-terdekat-reguler).feature'
-    //'./tests/features/spanduk_online/03banner(info-src-reguler).feature'
+    // "./tests/features/spanduk_online/02banner(toko-terdekat-reguler).feature",
+    // "./tests/features/spanduk_online/03banner(info-src-reguler).feature",
     //'./tests/features/spanduk_online/04banner(flying-button-reguler).feature'
     //'./tests/features/spanduk_online/05banner(inapp-cc).feature'
     //'./tests/features/spanduk_online/06banner(toko-terdekat-cc).feature'
@@ -114,29 +114,29 @@ exports.config = {
     //'./tests/features/spanduk_online/12banner(flying-button-rrp).feature'
     //'./tests/features/spanduk_online/13banner(employee-only).feature'
     //'./tests/features/spanduk_online/14banner(berlangganan).feature'
-    //'./tests/features/spanduk_online/15banner(tidak-berlangganan).feature'
+    // "./tests/features/spanduk_online/15banner(tidak-berlangganan).feature",
     //popup-notifikasi ada import gambar manual
-    //'./tests/features/notification/16notification(popup-notifikasi-reguler).feature'
+    // "./tests/features/notification/16notification(popup-notifikasi-reguler).feature",
     //'./tests/features/notification/17notification(popup-notifikasi-cc).feature'
     //'./tests/features/notification/18notification(popup-notifikasi-rrp).feature'
     //'./tests/features/notification/19notification(popup-notifikasi-employee).feature'
     //'./tests/features/notification/20notification(popup-notifikasi-berlangganan).feature'
     //'./tests/features/notification/21notification(popup-notifikasi-tidak-berlangganan).feature'
-    //'./tests/features/notification/22notification(push-notif-reguler).feature'
+    // "./tests/features/notification/22notification(push-notif-reguler).feature",
     //'./tests/features/notification/23notification(push-notif-cc).feature'
     //'./tests/features/notification/24notification(push-notif-rrp).feature'
     //'./tests/features/notification/25notification(push-notif-employee).feature'
     //'./tests/features/notification/26notification(push-notif-berlangganan).feature'
     //'./tests/features/notification/27notification(push-notif-tidak-berlangganan).feature'
     //voucher ada import gambar manual
-    //'./tests/features/voucher/28voucher(tipe-semua).feature'
+    // "./tests/features/voucher/28voucher(tipe-semua).feature",
     //'./tests/features/voucher/29voucher(tipe-perokok-cc).feature'
     //'./tests/features/voucher/30voucher(tipe-pengguna-iqos).feature'
     //'./tests/features/voucher/31voucher(tipe-bukan-perokok).feature'
     //'./tests/features/voucher/32voucher(tipe-perokok-cc-dan-iqos).feature'
     //undian dan stw ada import gambar dan file
     //'./tests/features/undian/64crud(undian-dan-pemenang).feature'
-    //'./tests/features/spinthewheel/65crud-spinthewheel(batasan-produk-1).feature'
+    "./tests/features/spinthewheel/65crud-spinthewheel(batasan-produk-1).feature",
     //'./tests/features/spinthewheel/66crud-spinthewheel(batasan-produk-1-dengan-OR).feature'
     //'./tests/features/spinthewheel/67crud-spinthewheel(batasan-produk-1-dengan-AND).feature'
     //'./tests/features/spinthewheel/68crud-spinthewheel(batasan-kategori-1).feature'
@@ -152,7 +152,7 @@ exports.config = {
     //'./tests/features/spinthewheel/110setup-stwmitra.feature'
     // tiawicaksono
     // './tests/features/kpisetting/63kpisetting.feature'
-    "./tests/features/kpisetting/5321kpigrouplist.feature",
+    // "./tests/features/kpisetting/5321kpigrouplist.feature",
   ],
   // Patterns to exclude.
   exclude: [
@@ -294,28 +294,28 @@ exports.config = {
       },
     ],
 
-    [
-      video,
-      {
-        outputDir: "./reports/video",
-        // //recordAllActions: true,
-        saveAllVideos: true, // If true, also saves videos for successful test cases
-        videoSlowdownMultiplier: 5, // Higher to get slower videos, lower for faster videos [Value 1-100]
-        //     // maxTestNameCharacters: 1000,   //Default 250
-        videoRenderTimeout: 600000, //Default 5
-      },
-    ],
+    // [
+    //   video,
+    //   {
+    //     outputDir: "./reports/video",
+    //     //recordAllActions: true,
+    //     saveAllVideos: true, // If true, also saves videos for successful test cases
+    //     videoSlowdownMultiplier: 5, // Higher to get slower videos, lower for faster videos [Value 1-100]
+    //     // maxTestNameCharacters: 1000,   //Default 250
+    //     videoRenderTimeout: 600000, //Default 5
+    //   },
+    // ],
 
-    [
-      "allure",
-      {
-        outputDir: "./allure-results",
-        disableWebdriverStepsReporting: false,
-        disableWebdriverScreenshotsReporting: false,
-        useCucumberStepReporter: true,
-        addConsoleLogs: true,
-      },
-    ],
+    // [
+    //   "allure",
+    //   {
+    //     outputDir: "./allure-results",
+    //     disableWebdriverStepsReporting: false,
+    //     disableWebdriverScreenshotsReporting: false,
+    //     useCucumberStepReporter: true,
+    //     addConsoleLogs: true,
+    //   },
+    // ],
 
     // ['cucumberjs-json', {
     //     jsonFolder: './reports/cucumberjs-json/json',
@@ -335,70 +335,70 @@ exports.config = {
       //'./tests/step-definitions/login/1login-external.js'
       // "./tests/step-definitions/tasksequencing/53createtsm1000kaudience.js",
       // "./tests/step-definitions/tasksequencing/42createtsm-xp.js",
-      // './tests/step-definitions/tasksequencing/47createtsmwithplanogrammission.js'
-      // './tests/step-definitions/tasksequencing/4createtsm-pinupmission.js'
-      // './tests/step-definitions/tasksequencing/5createtsm-without-pinupmission.js'
+      // "./tests/step-definitions/tasksequencing/47createtsmwithplanogrammission.js",
+      // "./tests/step-definitions/tasksequencing/4createtsm-pinupmission.js",
+      // "./tests/step-definitions/tasksequencing/5createtsm-without-pinupmission.js",
       // './tests/step-definitions/tasksequencing/5createtsm-without-pinupmission2.js' //tambah -2 nameWithoutPinUp5
-      // './tests/step-definitions/tasksequencing/17createmissiontaskbasedresponse.js'
-      // './tests/step-definitions/tasksequencing/18createquizmission.js'
-      //'./tests/step-definitions/tasksequencing/19createtaskbasedresponse-pushtoff.js'
-      // './tests/step-definitions/tasksequencing/16createmission-ir-tsm.js'
-      // './tests/step-definitions/tasksequencing/26publish-tsm.js'
-      // './tests/step-definitions/tasksequencing/28unpublish-tsm.js'
-      // './tests/step-definitions/tasksequencing/6exportimportcoin.js'
-      // './tests/step-definitions/tasksequencing/27requestapproval-coinadjustment.js'
-      // './tests/step-definitions/templatetugas/2createtemplatemission-custombackground.js'
-      // './tests/step-definitions/templatetugas/3createtemplatemission-backgrounddefault.js'
-      //'./tests/step-definitions/templatetugas/29importimage.js'
+      // "./tests/step-definitions/tasksequencing/17createmissiontaskbasedresponse.js",
+      // "./tests/step-definitions/tasksequencing/18createquizmission.js",
+      // "./tests/step-definitions/tasksequencing/19createtaskbasedresponse-pushtoff.js",
+      // "./tests/step-definitions/tasksequencing/16createmission-ir-tsm.js",
+      // "./tests/step-definitions/tasksequencing/26publish-tsm.js",
+      // "./tests/step-definitions/tasksequencing/28unpublish-tsm.js",
+      // "./tests/step-definitions/tasksequencing/6exportimportcoin.js",
+      // "./tests/step-definitions/tasksequencing/27requestapproval-coinadjustment.js",
+      // "./tests/step-definitions/templatetugas/2createtemplatemission-custombackground.js",
+      // "./tests/step-definitions/templatetugas/3createtemplatemission-backgrounddefault.js",
+      // "./tests/step-definitions/templatetugas/29importimage.js",
       // './tests/step-definitions/templatetugas/30importvideo.js'
-      // './tests/step-definitions/templatetugas/31selectattributemisi.js'
+      // "./tests/step-definitions/templatetugas/31selectattributemisi.js",
       //  './tests/step-definitions/templatetugas/32selectpertanyaan.js'
       // './tests/step-definitions/templatetugas/33sharablelink.js'
-      // './tests/step-definitions/templatetugas/46templatetugasplanogram.js'
-      // './tests/step-definitions/templatetugas/49templatetugasupc.js'
-      // './tests/step-definitions/templatetugas/55templatetugastbrsemua.js'
-      // './tests/step-definitions/produk/56createproductupc.js'
-      // './tests/step-definitions/audience/8export-import.js'
-      // './tests/step-definitions/audience/50importaudiencepersonalize.js'
-      // './tests/step-definitions/audience/51import200kaudiencepersonalize.js'
+      // "./tests/step-definitions/templatetugas/46templatetugasplanogram.js",
+      // "./tests/step-definitions/templatetugas/49templatetugasupc.js",
+      // "./tests/step-definitions/templatetugas/55templatetugastbrsemua.js",
+      // "./tests/step-definitions/produk/56createproductupc.js",
+      // "./tests/step-definitions/audience/8export-import.js",
+      // "./tests/step-definitions/audience/50importaudiencepersonalize.js",
+      // "./tests/step-definitions/audience/51import200kaudiencepersonalize.js",
       // './tests/step-definitions/audience/52import1000kaudiencenonpersonalize.js'
-      //'./tests/step-definitions/audience/57createaudiencemitranonpersonalize.js'
-      // './tests/step-definitions/approvalcoinadjustment/9approve.js'
-      // './tests/step-definitions/approvalcoinadjustment/10reject.js'
-      //'./tests/step-definitions/coinredemptionapproval/39rejectrequest.js'
+      // "./tests/step-definitions/audience/57createaudiencemitranonpersonalize.js",
+      // "./tests/step-definitions/approvalcoinadjustment/9approve.js",
+      // "./tests/step-definitions/approvalcoinadjustment/10reject.js",
+      // "./tests/step-definitions/coinredemptionapproval/39rejectrequest.js",
       // './tests/step-definitions/coinredemptionapproval/37approverequest.js'
-      // './tests/step-definitions/coindisbursement/38uploadresultpayment.js'
-      // './tests/step-definitions/coindisbursement/13publish-coindisbursement.js'
+      // "./tests/step-definitions/coindisbursement/38uploadresultpayment.js",
+      // "./tests/step-definitions/coindisbursement/13publish-coindisbursement.js",
       // './tests/step-definitions/coindisbursement/15unpublish-coindisbursement.js'
-      // './tests/step-definitions/coindisbursement/14setupprogrampenukarancoinPB.js'
+      // "./tests/step-definitions/coindisbursement/14setupprogrampenukarancoinPB.js",
       // './tests/step-definitions/coindisbursement/14setupprogrampenukarancoinTB.js'
-      // './tests/step-definitions/dteautomation/20digitalcoupon-nontsm.js'
-      // './tests/step-definitions/dteautomation/21digitalcoupon-tsm.js'
+      // "./tests/step-definitions/dteautomation/20digitalcoupon-nontsm.js",
+      // "./tests/step-definitions/dteautomation/21digitalcoupon-tsm.js",
       // './tests/step-definitions/dteautomation/22eorder-nontsm.js'
       // './tests/step-definitions/dteautomation/23eorder-tsm.js'
       // './tests/step-definitions/dteautomation/24referralcode-nontsm.js'
       // './tests/step-definitions/dteautomation/25referralcode-tsm.js'
-      // './tests/step-definitions/employeemapping/34crudemployeemappingpb.js'
+      // "./tests/step-definitions/employeemapping/34crudemployeemappingpb.js",
       // './tests/step-definitions/employeemapping/35crudemployeemappingtb.js'
-      // './tests/step-definitions/subgtp/36crudsubgtp.js'
+      // "./tests/step-definitions/subgtp/36crudsubgtp.js",
       // "./tests/step-definitions/taskverification2.0/40taskverification2.0.js",
       // './tests/step-definitions/taskverification2.0/58taskverificationmitra.js'
       // './tests/step-definitions/taskverification2.0/54importverificationassignment150kdata.js'
-      //  './tests/step-definitions/xp/43crudxp-audiencefixedpanel.js'
-      // './tests/step-definitions/xp/44createxp-audiencepopulationblast.js'
-      // './tests/step-definitions/spinthewheel/41crudespinthewheel-audiencefixedpanel.js'
+      // "./tests/step-definitions/xp/43crudxp-audiencefixedpanel.js",
+      // "./tests/step-definitions/xp/44createxp-audiencepopulationblast.js",
+      // "./tests/step-definitions/spinthewheel/41crudespinthewheel-audiencefixedpanel.js",
       // './tests/step-definitions/spinthewheel/41crudespinthewheel-audiencepopulationblast.js'
-      // './tests/step-definitions/imagerecognition/45irtemplateplanogram.js'
-      // './tests/step-definitions/imagerecognition/48ir-checkimage.js'
+      // "./tests/step-definitions/imagerecognition/45irtemplateplanogram.js",
+      // "./tests/step-definitions/imagerecognition/48ir-checkimage.js",
       // "./tests/step-definitions/calltoaction/59crudcta.js",
-      // './tests/step-definitions/calltoaction/62ctacustomized.js'
-      // './tests/step-definitions/principalnotesforretailer/61principalnotesforretailer.js'
-      // './tests/step-definitions/fieldforce/60fieldforce.js'
+      // "./tests/step-definitions/calltoaction/62ctacustomized.js",
+      // "./tests/step-definitions/principalnotesforretailer/61principalnotesforretailer.js",
+      // "./tests/step-definitions/fieldforce/60fieldforce.js",
       //spanduk_online ada edit datesampai dan import gambar manual
       // "./tests/step-definitions/spanduk_online/*.js",
       // "./tests/step-definitions/spanduk_online/01banner(inapp-reguler).js",
-      // './tests/step-definitions/spanduk_online/02banner(toko-terdekat-reguler).js'
-      //'./tests/step-definitions/spanduk_online/03banner(info-src-reguler).js'
+      // "./tests/step-definitions/spanduk_online/02banner(toko-terdekat-reguler).js",
+      // "./tests/step-definitions/spanduk_online/03banner(info-src-reguler).js",
       //'./tests/step-definitions/spanduk_online/04banner(flying-button-reguler).js'
       //'./tests/step-definitions/spanduk_online/05banner(inapp-cc).js'
       //'./tests/step-definitions/spanduk_online/06banner(toko-terdekat-cc).js'
@@ -410,29 +410,29 @@ exports.config = {
       //'./tests/step-definitions/spanduk_online/12banner(flying-button-rrp).js'
       //'./tests/step-definitions/spanduk_online/13banner(employee-only).js'
       //'./tests/step-definitions/spanduk_online/14banner(berlangganan).js'
-      //'./tests/step-definitions/spanduk_online/15banner(tidak-berlangganan).js'
+      // "./tests/step-definitions/spanduk_online/15banner(tidak-berlangganan).js",
       //popup-notifikasi ada import gambar manual
-      //'./tests/step-definitions/notification/16notification(popup-notifikasi-reguler).js'
+      // "./tests/step-definitions/notification/16notification(popup-notifikasi-reguler).js",
       //'./tests/step-definitions/notification/17notification(popup-notifikasi-cc).js'
       //'./tests/step-definitions/notification/18notification(popup-notifikasi-rrp).js'
       //'./tests/step-definitions/notification/19notification(popup-notifikasi-employee).js'
       //'./tests/step-definitions/notification/20notification(popup-notifikasi-berlangganan).js'
       //'./tests/step-definitions/notification/21notification(popup-notifikasi-tidak-berlangganan).js'
-      //'./tests/step-definitions/notification/22notification(push-notif-reguler).js'
+      // "./tests/step-definitions/notification/22notification(push-notif-reguler).js",
       //'./tests/step-definitions/notification/23notification(push-notif-cc).js'
       //'./tests/step-definitions/notification/24notification(push-notif-rrp).js'
       //'./tests/step-definitions/notification/25notification(push-notif-employee).js'
       //'./tests/step-definitions/notification/26notification(push-notif-berlangganan).js'
       //'./tests/step-definitions/notification/27notification(push-notif-tidak-berlangganan).js'
       //voucher ada import gambar manual
-      //'./tests/step-definitions/voucher/28voucher(tipe-semua).js'
+      // "./tests/step-definitions/voucher/28voucher(tipe-semua).js",
       //'./tests/step-definitions/voucher/29voucher(tipe-perokok-cc).js'
       //'./tests/step-definitions/voucher/30voucher(tipe-pengguna-iqos).js'
       // './tests/step-definitions/voucher/31voucher(tipe-bukan-perokok).js'
       //'./tests/step-definitions/voucher/32voucher(tipe-perokok-cc-dan-iqos).js'
       //undian dan stw ada import gambar dan file
       //'./tests/step-definitions/undian/64crud(undian-dan-pemenang).js'
-      // './tests/step-definitions/spinthewheel/65crud-spinthewheel(batasan-produk-1).js'
+      "./tests/step-definitions/spinthewheel/65crud-spinthewheel(batasan-produk-1).js",
       //'./tests/step-definitions/spinthewheel/66crud-spinthewheel(batasan-produk-1-dengan-OR).js'
       //'./tests/step-definitions/spinthewheel/67crud-spinthewheel(batasan-produk-1-dengan-AND).js'
       //'./tests/step-definitions/spinthewheel/68crud-spinthewheel(batasan-kategori-1).js'
@@ -446,10 +446,9 @@ exports.config = {
       //'./tests/step-definitions/spinthewheel/76create-push-notif-spinthewheel.js'
       //'./tests/step-definitions/spinthewheel/77edit-push-notif-spinthewheel.js'
       //'./tests/step-definitions/spinthewheel/110setup-stwmitra.js'
-
       // tiawicaksono
       // './tests/step-definitions/kpisetting/63kpisetting.js'
-      "./tests/step-definitions/kpisetting/5321kpigrouplist.js",
+      // "./tests/step-definitions/kpisetting/5321kpigrouplist.js",
     ],
     // <boolean> show full backtrace for errors
     backtrace: false,

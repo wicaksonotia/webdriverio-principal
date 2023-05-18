@@ -4,7 +4,7 @@ module.exports = {
     emailInternal: "sisda.utrujah@contracted.sampoerna.com",
     pmintlEmail: "sutrujah@pmintl.net",
     username: "PMIsutrujah",
-    accountname: "Reda",
+    accountname: "Tia Wicaksono",
     password: "Jakarta2023",
     passwordPmi: "!Weekend123",
     codeOtpHani: "123456",
@@ -156,7 +156,7 @@ module.exports = {
     headerPopUpConfirmRejected: "Tolak Request Adjustment Coin",
   },
   fieldForce: {
-    name: "Reda Testing FF",
+    name: "Testing FF 160523",
     username: "wkndredamein",
     classification: "REE",
     classificationEdit: "SPV",
@@ -185,7 +185,7 @@ module.exports = {
   dteAutomation: {
     typeDC: "Digital Coupon",
     // tradeProgramDC : 'Trade Program 002',
-    searchTP: "TP DTE",
+    searchTP: "TP Khusus Hero",
     totalKuponNonTsm: "10", //Scenario 20
     coinRewardperFrekDCNonTsm: "100", //Scenario 20
     frekuensiDCNonTsm: "10", //Scenario 20
@@ -223,37 +223,37 @@ module.exports = {
     statusBerakhir: "BERAKHIR",
   },
   IR: {
-    templateNameCheckImage: "Check Image 2604",
+    templateNameCheckImage: "Check Image 150623",
     groupNameCheckImage: "Master Group (Stock Check dan Planogram)",
     statusReq: "running",
     statusDone: "done",
-    groupName: "Master Brand Group - 2604",
+    groupName: "Master Brand Group - 150623",
     modelGroupName: "Image_Recognition_CC/1643203820866",
     modelName:
       "Image_Recognition_CC.2022-03-10T10.09.43/1646881783647 - STOPPED",
-    SKUName1: "Master Brand 1 2604",
-    SKUName2: "Master Brand 2 2604",
-    SKUName3: "Master Brand 3 2604",
-    templateName: "Template Planogram 2604",
-    templateNameEdit: "Template Planogram 2604 Edit",
+    SKUName1: "Master Brand 1 150623",
+    SKUName2: "Master Brand 2 150623",
+    SKUName3: "Master Brand 3 150623",
+    templateName: "Template Planogram 150623",
+    templateNameEdit: "Template Planogram 150623 Edit",
     row: "3",
     column: "2",
-    competitor: "Master Brand 1 2604",
+    competitor: "Master Brand 1 150623",
   },
   cta: {
-    nama: "CTA Grup 2604",
+    nama: "CTA Grup 160523",
     deskripsi: "Regression Test",
-    namaEdit: "Edit CTA Grup 2604",
-    mulai: "08-05-2023",
-    selesai: "10-05-2023",
+    namaEdit: "Edit CTA Grup 160523",
+    mulai: "16-05-2023",
+    selesai: "31-05-2023",
   },
   employeeMapping: {
     searchByNamaEmployee1: "Shabrina - nur.shabrina@weekendinc.com",
-    searchByNamaEmployee2: "Sisda - sisda.utrujah@contracted.sampoerna.com",
+    searchByNamaEmployee2: "Tia Wicaksono - wicaksono.tia@gmail.com",
     searchByNamaEmployeeEdit:
       "Hanifah Budianto - hanifah.budianto@contracted.sampoerna.com",
-    employee: "Sisda",
-    email: "sisda.utrujah@contracted.sampoerna.com",
+    employee: "Tia Wicaksono",
+    email: "wicaksono.tia@gmail.com",
     area: "ZONENORTHSUM",
     metodePB: "saldo pojok bayar",
     metodeTB: "transfer bank",
@@ -274,9 +274,9 @@ module.exports = {
     statusEdit: "inactive",
   },
   XP: {
-    startDate: "04-05-2023 00:00:00",
-    endDate: "11-05-2023 00:00:00",
-    endAtDate: "12-05-2023 00:00:00",
+    startDate: "16-05-2023 00:00:00",
+    endDate: "30-05-2023 00:00:00",
+    endAtDate: "31-05-2023 00:00:00",
 
     namaProgramXP: "Program XP Audience Population Blast 2604",
     jumlahLevel: "2",
@@ -322,7 +322,7 @@ module.exports = {
     inputLevel3: "Level 3",
   },
   spinTheWheel: {
-    namaProgramSTHFP: "Spin The Wheel Audience Fixed Panel 2604",
+    namaProgramSTHFP: "Spin The Wheel Audience Fixed Panel 160523",
     tradeProgramFP: "TP-STW",
     frekBelanjaFP: "2",
     frekRewardFP: "1",
@@ -470,8 +470,8 @@ module.exports = {
     //
   },
   notes: {
-    name: "Principal Notes 2604",
-    desc: "Testing Sisda",
+    name: "Principal Notes 160523",
+    desc: "Testing Tia",
   },
   coinDisbursement: {
     //Penukaran Coin
