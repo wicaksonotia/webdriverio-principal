@@ -146,12 +146,17 @@ exports.config = {
     // "./tests/features/spinthewheel/72crud-spinthewheel(exclude-kategori-1).feature",
     // "./tests/features/spinthewheel/73crud-spinthewheel(reward-noncoin).feature",
     // "./tests/features/spinthewheel/74crud-spinthewheel(reward-xp).feature",
-    "./tests/features/spinthewheel/75crud-spinthewheel(reward-coin-noncoin-dan-xp).feature",
+    //"./tests/features/spinthewheel/75crud-spinthewheel(reward-coin-noncoin-dan-xp).feature",
     //'./tests/features/spinthewheel/76create-push-notif-spinthewheel.feature'
     //'./tests/features/spinthewheel/77edit-push-notif-spinthewheel.feature'
     //'./tests/features/spinthewheel/110setup-stwmitra.feature'
+    
+    //'./tests/features/employeemapping/94crudemployeemapping(coin-potongan-belanja).feature'
+    './tests/features/koinpotonganbelanja/95createkoinpotonganbelanja(batasanproduk).feature'
+
     // tiawicaksono
     // './tests/features/kpisetting/63kpisetting.feature'
+    //"./tests/features/kpisetting/5321kpigrouplist.feature",
     // "./tests/features/kpisetting/5321kpigrouplist.feature",
   ],
   // Patterns to exclude.
@@ -294,6 +299,7 @@ exports.config = {
       },
     ],
 
+    /*
     [
       video,
       {
@@ -316,6 +322,8 @@ exports.config = {
         addConsoleLogs: true,
       },
     ],
+
+    */
 
     // ['cucumberjs-json', {
     //     jsonFolder: './reports/cucumberjs-json/json',
@@ -360,6 +368,7 @@ exports.config = {
       // "./tests/step-definitions/produk/56createproductupc.js",
       // "./tests/step-definitions/audience/8export-import.js",
       // "./tests/step-definitions/audience/50importaudiencepersonalize.js",
+      //"./tests/step-definitions/audience/51import200kaudiencepersonalize.js",
       "./tests/step-definitions/audience/51import200kaudiencepersonalize.js",
       // "./tests/step-definitions/audience/52import1000kaudiencenonpersonalize.js",
       // "./tests/step-definitions/audience/57createaudiencemitranonpersonalize.js",
@@ -442,13 +451,17 @@ exports.config = {
       // "./tests/step-definitions/spinthewheel/72crud-spinthewheel(exclude-kategori-1).js",
       // "./tests/step-definitions/spinthewheel/73crud-spinthewheel(reward-noncoin).js",
       // "./tests/step-definitions/spinthewheel/74crud-spinthewheel(reward-xp).js",
-      "./tests/step-definitions/spinthewheel/75crud-spinthewheel(reward-coin-noncoin-dan-xp).js",
+      //"./tests/step-definitions/spinthewheel/75crud-spinthewheel(reward-coin-noncoin-dan-xp).js",
       //'./tests/step-definitions/spinthewheel/76create-push-notif-spinthewheel.js'
       //'./tests/step-definitions/spinthewheel/77edit-push-notif-spinthewheel.js'
       //'./tests/step-definitions/spinthewheel/110setup-stwmitra.js'
+
+      //'./tests/step-definitions/employeemapping/94crudemployeemapping(coin-potongan-belanja).js'
+      './tests/step-definitions/koinpotonganbelanja/95createkoinpotonganbelanja(batasanproduk).js'
+
       // tiawicaksono
       // './tests/step-definitions/kpisetting/63kpisetting.js'
-      // "./tests/step-definitions/kpisetting/5321kpigrouplist.js",
+      //"./tests/step-definitions/kpisetting/5321kpigrouplist.js",
     ],
     // <boolean> show full backtrace for errors
     backtrace: false,

@@ -142,10 +142,51 @@ class EmployeeMappingPage extends Page {
     await browser.pause(5000);
   }
 
-  //overwrite specifc options to adapt it to page object
-  open() {
-    return super.open("dte/employee-mapping");
+  async editTask() {
+    // await browser.execute(() => document.body.style.zoom='70%')
+    await browser.pause(3000);
+    await expect(this.btnEdit[0]).toBeExisting();
+    await this.btnEdit[0].click();
   }
+
+  async deleteTask() {
+    // await browser.execute(() => document.body.style.zoom='70%')
+    await browser.pause(3000);
+    await expect(this.btnDelete[0]).toBeExisting();
+    await this.btnDelete[0].click();
+    await expect(this.btnConfirmDelete).toBeExisting();
+    await this.btnConfirmDelete.click();
+  }
+
+  async expectNewEmployeeRow1(employee, email, area, metode) {
+    await expect(this.employee[0]).toHaveText(employee);
+    await expect(this.email[0]).toHaveText(email);
+    await this.employee[0].click();
+    await browser.pause(5000);
+  }
+    async expectNewEmployeeRow1 (employee,email,area,metode) {
+        await expect(this.employee[0]).toHaveText(employee)
+        await expect(this.email[0]).toHaveText(email)
+        await expect(this.area[0]).toHaveText(area)
+        await expect(this.metode[0]).toHaveText(metode)
+        await this.employee[0].click()
+        await browser.pause(5000)
+    }
+
+    async expectNewEmployeeRowSatu (employee,email,area,metode) {
+        await expect(this.employee[0]).toHaveText(employee)
+        await expect(this.email[0]).toHaveText(email)
+        await expect(this.area[0]).toHaveText(area)
+        await expect(this.metode[0]).toHaveText(metode)
+        //await this.employee[0].click()
+        //await browser.pause(5000)
+    }
+    
+    //overwrite specifc options to adapt it to page object
+    open () {
+        return super.open('dte/employee-mapping');
+    }
+
 }
 
 export default new EmployeeMappingPage();

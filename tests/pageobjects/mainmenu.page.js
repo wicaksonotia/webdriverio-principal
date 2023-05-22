@@ -37,8 +37,9 @@ class MainmenuPage extends Page {
     get popupNotifikasiMenu () {return $('#menu-368')}
     get spandukOnlineMenu () {return $('#menu-369')}
 
-    get dropdownCNReward () {return $('[class="nav-link mat-ripple ng-tns-c24-35 ng-star-inserted"]')}
+    get dropdownCNReward () {return $('[class="nav-link mat-ripple ng-tns-c24-20 ng-star-inserted"]')}
     get b2cVoucherMenu () {return $('#menu-394')}
+    get koinPotonganBelanjaMenu () {return $('#menu-396')}
 
     get dropdownUndianMenu () {return $('[class="nav-link mat-ripple ng-tns-c24-11 ng-star-inserted"]')}
     get undianMenu () {return $('#menu-361')} //pengaturan undian
@@ -205,6 +206,13 @@ class MainmenuPage extends Page {
         await this.b2cVoucherMenu.scrollIntoView({setTimeout:10000});
         //await expect(this.b2cVoucherMenu).toBeDisplayed({ setTimeout: 10000 })
         await this.b2cVoucherMenu.click();
+    }
+
+    async KoinPotonganBelanja (){
+        //await this.navigationSearch.addValue('Koin Potongan Belanja');
+        await this.koinPotonganBelanjaMenu.scrollIntoView({setTimeout:10000});
+        //await expect(this.b2cVoucherMenu).toBeDisplayed({ setTimeout: 10000 })
+        await this.koinPotonganBelanjaMenu.click();
     }
 
     async DropdownUndian () {

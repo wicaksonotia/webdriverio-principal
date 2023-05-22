@@ -97,13 +97,13 @@ class FormEmployeeMappingPage extends Page {
     await this.titlePage.scrollIntoView();
   }
 
-  async region() {
-    await expect(this.drpdwn[2]).toBeExisting();
-    await this.drpdwn[2].click();
-    await this.drpdwnValue[2].waitForExist();
-    await expect(this.drpdwnValue[2]).toBeExisting();
-    await this.drpdwnValue[2].click();
-  }
+    async region () {
+        await expect(this.drpdwn[2]).toBeExisting()
+        await this.drpdwn[2].click()
+        await this.drpdwnValue[2].waitForExist()
+        await expect(this.drpdwnValue[2]).toBeExisting()
+        await this.drpdwnValue[2].click()
+    }
 
   async area() {
     await expect(this.drpdwn[3]).toBeExisting();
@@ -135,13 +135,13 @@ class FormEmployeeMappingPage extends Page {
     await this.drpdwnMetodeValue[1].click();
   }
 
-  async submitForm() {
-    // await (await browser.getActiveElement()).click()
-    await this.btnSimpan.waitForClickable();
-    await expect(this.btnSimpan).toBeClickable();
-    await this.btnSimpan.click();
-    await browser.pause(5000);
-  }
+    async submitForm () {
+        // await (await browser.getActiveElement()).click()
+        await this.btnSimpan.waitForClickable();
+        await expect(this.btnSimpan).toBeClickable()
+        await this.btnSimpan.click()
+        await browser.pause(5000)
+    }
 
   async notification() {
     await this.notif.waitForExist();
