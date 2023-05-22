@@ -40,5 +40,5 @@ Feature: 15. InApp Banner Tidak Berlangganan (inapp-tidak-berlangganan)
     
     Examples:
       | nama_spanduk                           | nama_halaman                           | isi_halaman                            |
-      | In App Tidak Berlangganan Testing Reda | In App Tidak Berlangganan Testing Reda | In App Tidak Berlangganan Testing Reda |
+      | In App Tidak Berlangganan Testing Tia | In App Tidak Berlangganan Testing Tia | In App Tidak Berlangganan Testing Tia |
 

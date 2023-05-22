@@ -1,4 +1,5 @@
 import Page from "../page";
+import { setStartEndDate } from "../../helper/commands";
 const path = require("path");
 
 //sub page containing specific selectors and methods for a specific page
@@ -139,16 +140,10 @@ class FormCreatePage extends Page {
   get dataCell() {
     return $$("#data-cell");
   }
+
   get btnSubmit() {
     return $("button#btnSubmitTaskSequencing");
   }
-  get btnSubmitEdit() {
-    return $("#btn-edit");
-  }
-  get btnCekDetail() {
-    return $("#btn-detail");
-  }
-
   //Export
 
   //Import
@@ -192,14 +187,12 @@ class FormCreatePage extends Page {
     await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
     await expect(browser).toHaveUrlContaining("dte/task-sequencing/create");
     await expect(this.titlePage).toHaveText("Buat Task Sequencing");
-    // await browser.pause(5000)
   }
 
   async formEditPage() {
     await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
     await expect(this.titlePage).toHaveText("Ubah Task Sequencing");
     await expect(browser).toHaveUrlContaining("dte/task-sequencing/edit");
-    // await browser.pause(5000)
   }
 
   async formDetailPage() {
@@ -210,101 +203,50 @@ class FormCreatePage extends Page {
     await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
     await expect(browser).toHaveUrlContaining("dte/task-sequencing/detail");
     await expect(this.titlePage).toHaveText("Detail Task Sequencing");
-    // await browser.pause(5000)
   }
 
   async createTSM(nameTSM, tradeProgram, groupAudience) {
     await this.inputNama.setValue(nameTSM);
     await browser.pause(3000);
+
     await this.dropdownTradeProgram.click();
     await this.searchTP.waitForExist();
-    // await expect(this.searchTP).toBeExisting()
     await this.searchTP.setValue(tradeProgram);
-    await browser.pause(5000);
+    await browser.pause(10000);
     await this.selectTradeProgram[0].waitForExist();
-    await browser.pause(3000);
     await this.selectTradeProgram[0].click();
-    // console.log('List Trade Program: ')
-    // const titleTP = await this.selectTradeProgram
-    // titleTP.forEach(element => {
-    //     const tasks = element.getText()
-    //         // console.log(tasks)       //output: Promise { <pending> }
-    //         tasks.then(function(result) {
-    //         console.log(result)         //output: list Trade Program
-    //         if (String(result) == tradeProgram) {
-    //             element.click()
-    //         }
-    //     })
-    // })
     await this.searchTP.waitForExist({ reverse: true });
+
     await this.dropdownGroupAudience.click();
     await this.searchGroupAudience.waitForExist();
-    // await expect(this.searchGroupAudience).toBeDisplayed()
-    // await browser.pause(2000)
     await this.searchGroupAudience.setValue(groupAudience);
-    await browser.pause(8000);
+    await browser.pause(10000);
     await this.selectGroupAudience[0].waitForExist();
-    await browser.pause(3000);
     await this.selectGroupAudience[0].click();
-    // console.log('List Audience: ')
-    // const titleAudP = await this.selectGroupAudience
-    // titleAudP.forEach(element => {
-    //     const audience = element.getText()
-    //         console.log(audience)       //output: Promise { <pending> }
-    //         audience.then(function(result) {
-    //         console.log(result)         //output: list Trade Program
-    //         if (String(result) == groupAudience) {
-    //             element.click()
-    //         }
-    //     })
-    // })
-    // await browser.pause(2000)
-    // await this.searchGroupAudience.waitForExist({ reverse: true });
-    await browser.pause(8000);
+    await this.searchGroupAudience.waitForExist({ reverse: true });
+
     await this.btnSubmit.scrollIntoView();
 
-    // khusus untuk scenario 16
-    // await this.startDate.click()
-    // await this.popUpCalendar.waitForExist();
-    // await this.popUpCalendar.$$('tr')[3].$$('td')[4].$('div').click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
-    // await this.startTime.click()
-    // await this.popUpTimeStart.waitForExist();
-    // await this.popUpTimeStart.$$('div')[2].$('span').click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
-    // await this.btnTimePicker[1].click()
-
-    // await this.endDate.click()
-    // await this.popUpCalendar.waitForExist();
-    // await this.popUpCalendar.$$('tr')[3].$$('td')[4].$('div').click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
-    // await this.endTime.click()
-    // await this.popUpTimeEnd.waitForExist();
-    // await this.popUpTimeEnd.$$('div')[9].$('span').click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
-    // await this.btnTimePicker[1].click()
-
-    // untuk scenario task sequencing selain scenario 16
-    await this.startDate.click();
-    await this.popUpCalendar.waitForExist();
-    await this.popUpCalendar.$$("tr")[2].$$("td")[1].$("div").click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
+    // ==========untuk set starDate and endDate==========
+    await setStartEndDate(this.startDate, this.endDate, this.popUpCalendar);
     await this.startTime.click();
+    await browser.pause(3000);
     await this.popUpTimeStart.waitForExist();
     await this.popUpTimeStart.$$("div")[2].$("span").click();
     await this.btnTimePicker[1].click();
+    await browser.pause(3000);
 
-    await this.endDate.click();
-    await this.popUpCalendar.waitForExist();
-    await this.popUpCalendar.$$("tr")[3].$$("td")[1].$("div").click(); //contoh: 4,6: 29 Januari 2022
     await this.endTime.click();
+    await browser.pause(3000);
     await this.popUpTimeEnd.waitForExist();
     await this.popUpTimeEnd.$$("div")[9].$("span").click();
     await this.btnTimePicker[1].click();
-
-    await this.popUpCalendar.waitForExist({ reverse: true });
-    await browser.pause(2000);
+    await browser.pause(3000);
   }
 
   async exportFile() {
     await this.btnExportCoin.click();
-    await browser.pause(5000);
-    //alert "Request file berhasil."
+    await browser.pause(10000);
   }
 
   async downloadExportFile() {
@@ -355,7 +297,6 @@ class FormCreatePage extends Page {
     // await this.emailPenerima.waitForExist()
     // await this.emailPenerima.toHaveText(emailPenerimaImported)
     await browser.pause(2000);
-    //alert ""
   }
 
   async closePopUpImport() {
@@ -365,7 +306,6 @@ class FormCreatePage extends Page {
 
   async sendImportFile() {
     await this.btnKirimImportCoin.click();
-    //alert "Data berhasil dimsimpan/"
   }
 
   async confirmImport() {
@@ -401,15 +341,15 @@ class FormCreatePage extends Page {
   }
 
   async submitEditTsm() {
-    await this.btnSubmitEdit.waitForClickable();
-    await expect(this.btnSubmitEdit).toBeClickable();
-    await this.btnSubmitEdit.click();
+    await this.btnSubmit.waitForClickable();
+    await expect(this.btnSubmit).toBeClickable();
+    await this.btnSubmit.click();
     await browser.pause(5000);
   }
 
   async cekDetail() {
-    await expect(this.btnCekDetail).toBeClickable();
-    await this.btnCekDetail.click();
+    await expect(this.btnSubmit).toBeClickable();
+    await this.btnSubmit.click();
   }
 
   //overwrite specifc options to adapt it to page object

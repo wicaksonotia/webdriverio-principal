@@ -39,5 +39,5 @@ Feature: 10. Toko Terdekat RRP (toko-terdekat-rrp)
 
     Examples:
       | nama_spanduk                   | nama_halaman                   | isi_halaman                    |
-      | Toko Terdekat RRP Testing Reda | Toko Terdekat RRP Testing Reda | Toko Terdekat RRP Testing Reda |
+      | Toko Terdekat RRP Testing Tia | Toko Terdekat RRP Testing Tia | Toko Terdekat RRP Testing Tia |
 

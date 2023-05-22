@@ -39,5 +39,5 @@ Feature: 11. Info SRC RRP (info-src-rrp)
     
     Examples:
       | nama_spanduk              | nama_halaman              | isi_halaman              |
-      | Info SRC RRP Testing Reda | Info SRC RRP Testing Reda | Info SRC RRP Testing Reda|
+      | Info SRC RRP Testing Tia | Info SRC RRP Testing Tia | Info SRC RRP Testing Tia|
 

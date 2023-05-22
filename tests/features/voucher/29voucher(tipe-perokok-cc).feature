@@ -103,5 +103,5 @@ Feature: 29. B2C Voucher (voucher-tipe-perokok-cc)
 
     Examples:
       | nama_voucher                          | nama_lain_voucher                      | nilai_voucher |jumlah_voucher  |input_dari   |input_sampai  | isi_halaman                          | 
-      | Voucher Tipe Perokok CC Testing Reda  | Voucher Tipe Perokok CC Testing Reda   | 1200          |2               |18           |50            | voucher tipe perokok CC Testing Reda |
+      | Voucher Tipe Perokok CC Testing Tia  | Voucher Tipe Perokok CC Testing Tia   | 1200          |2               |18           |50            | voucher tipe perokok CC Testing Tia |
 

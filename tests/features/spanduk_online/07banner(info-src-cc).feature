@@ -39,5 +39,5 @@ Feature: 7. Info SRC CC (info-src-cc)
     
     Examples:
       | nama_spanduk             | nama_halaman             | isi_halaman               |
-      | Info SRC CC Testing Reda | Info SRC CC Testing Reda | Info SRC CC Testing Reda  |
+      | Info SRC CC Testing Tia | Info SRC CC Testing Tia | Info SRC CC Testing Tia  |
 
