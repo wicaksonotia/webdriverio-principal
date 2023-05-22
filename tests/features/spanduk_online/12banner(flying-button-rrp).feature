@@ -39,5 +39,5 @@ Feature: 12. Flying Button RRP (flying-button-rrp)
 
     Examples:
       | nama_spanduk                   | nama_halaman                  | isi_halaman                    |
-      | flying button RRP Testing Reda | flying button RRP Testing Reda| flying button RRP Testing Reda |
+      | flying button RRP Testing Tia | flying button RRP Testing Tia| flying button RRP Testing Tia |
 

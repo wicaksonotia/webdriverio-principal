@@ -38,5 +38,5 @@ Feature: 8. Flying Button CC (flying-button-cc)
 
     Examples:
       | nama_spanduk                  | nama_halaman                 | isi_halaman                   |
-      | flying button cc Testing Reda | flying button cc Testing Reda| flying button cc Testing Reda |
+      | flying button cc Testing Tia | flying button cc Testing Tia| flying button cc Testing Tia |
 

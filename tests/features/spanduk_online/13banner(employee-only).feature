@@ -37,5 +37,5 @@ Feature: 13. InApp Banner Employee (inapp-employee)
 
     Examples:
       | nama_spanduk                 | nama_halaman                 | isi_halaman                  |
-      | In App Employee Testing Reda | In App Employee Testing Reda | In App Employee Testing Reda |
+      | In App Employee Testing Tia | In App Employee Testing Tia | In App Employee Testing Tia |
 

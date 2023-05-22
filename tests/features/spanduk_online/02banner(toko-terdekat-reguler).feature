@@ -36,5 +36,5 @@ Feature: 2. Toko Terdekat Reguler (toko-terdekat-reguler)
     
     Examples:
       | nama_spanduk                       | nama_halaman                       | isi_halaman                        |
-      | Toko Terdekat Reguler Testing Reda | Toko Terdekat Reguler Testing Reda | Toko Terdekat Reguler Testing Reda |
+      | Toko Terdekat Reguler Testing Tia | Toko Terdekat Reguler Testing Tia | Toko Terdekat Reguler Testing Tia |
 

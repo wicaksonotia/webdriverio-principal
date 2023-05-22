@@ -40,5 +40,5 @@ Feature: 14. InApp Banner Berlangganan (inapp-berlangganan)
 
     Examples:
       | nama_spanduk                     | nama_halaman                     | isi_halaman                      |
-      | In App Berlangganan Testing Reda | In App Berlangganan Testing Reda | In App Berlangganan Testing Reda |
+      | In App Berlangganan Testing Tia | In App Berlangganan Testing Tia | In App Berlangganan Testing Tia |
 

@@ -37,5 +37,5 @@ Feature: 9. InApp Banner RRP (inapp-rrp)
     
     Examples:
       | nama_spanduk                   | nama_halaman                   | isi_halaman                       |
-      | In App Banner RRP Testing Reda | In App Banner RRP Testing Reda | In App Banner RRP Testing Reda |
+      | In App Banner RRP Testing Tia | In App Banner RRP Testing Tia | In App Banner RRP Testing Tia |
 
