@@ -39,5 +39,5 @@ Feature: 6. Toko Terdekat CC (toko-terdekat-cc)
     
     Examples:
       | nama_spanduk                  | nama_halaman                   | isi_halaman                   |
-      | Toko Terdekat CC Testing Reda | Toko Terdekat CC  Testing Reda | Toko Terdekat CC Testing Reda |
+      | Toko Terdekat CC Testing Tia | Toko Terdekat CC  Testing Tia | Toko Terdekat CC Testing Tia |
 

@@ -1,5 +1,5 @@
 import Page from "../page";
-import { setStartEndDate } from "../../helper/commands";
+import { setStartEndDateTP, setEndDate } from "../../helper/commands";
 
 //sub page containing specific selectors and methods for a specific page
 class FormTradeProgramPage extends Page {
@@ -102,7 +102,7 @@ class FormTradeProgramPage extends Page {
   async createTP(namaGTP, namaSGTP, namaTP, danaTP) {
     await browser.pause(10000);
     await this.dropdownGroupTradeProgram.scrollIntoView();
-    await browser.pause(1500);
+    await browser.pause(3000);
     await this.dropdownGroupTradeProgram.click();
     await this.searchGroupTradeProgram.waitForExist();
     await this.searchGroupTradeProgram.setValue(namaGTP);
@@ -117,12 +117,14 @@ class FormTradeProgramPage extends Page {
     await this.searchSubGroupTradeProgram.waitForExist({ reverse: true });
     await this.namaTradeProgram.scrollIntoView();
     await this.namaTradeProgram.setValue(namaTP);
-    await setStartEndDate(this.startDate, this.endDate, this.popUpCalendar);
-    await this.danaTradeProgram.setValue(danaTP);
-    await this.expiredCoin.click();
-    await this.popUpCalendar.$$("tr")[5].$$("td")[4].$("div").click();
-    await this.popUpCalendar.waitForExist({ reverse: true });
+    await setStartEndDateTP(this.startDate, this.endDate, this.popUpCalendar);
     await browser.pause(3000);
+    await this.danaTradeProgram.setValue(danaTP);
+    await setEndDate(this.expiredCoin, this.popUpCalendar);
+    // await this.expiredCoin.click();
+    // await this.popUpCalendar.$$("tr")[5].$$("td")[4].$("div").click();
+    // await this.popUpCalendar.waitForExist({ reverse: true });
+    // await browser.pause(3000);
   }
 
   async submit() {

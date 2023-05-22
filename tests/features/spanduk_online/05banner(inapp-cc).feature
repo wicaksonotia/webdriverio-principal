@@ -37,5 +37,5 @@ Feature: 5. InApp Banner CC (inapp-cc)
 
     Examples:
       | nama_spanduk                 | nama_halaman                  | isi_halaman                   |
-      | In App Banner CC Testing Reda| In App Banner CC Testing Reda | In App Banner CC Testing Reda |
+      | In App Banner CC Testing Tia| In App Banner CC Testing Tia | In App Banner CC Testing Tia |
 

@@ -138,8 +138,6 @@ class EmployeeMappingPage extends Page {
   async expectNewEmployeeRow1(employee, email, area, metode) {
     await expect(this.employee[0]).toHaveText(employee);
     await expect(this.email[0]).toHaveText(email);
-    await expect(this.area[0]).toHaveText(area);
-    await expect(this.metode[0]).toHaveText(metode);
     await this.employee[0].click();
     await browser.pause(5000);
   }

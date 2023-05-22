@@ -74,7 +74,6 @@ class CheckImagePage extends Page {
   async expectNewCheckImageRow1(name, status) {
     await expect(this.cellNamaCheckImage[0]).toHaveText(name);
     // await expect(this.cellStatus[0]).toHaveText(status)
-    await browser.pause(5000);
   }
 
   async clickCheckImageRow1() {

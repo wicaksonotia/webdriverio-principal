@@ -103,5 +103,5 @@ Feature: 28. B2C Voucher (voucher-tipe-semua)
 
     Examples:
       | nama_voucher                         | nama_lain_voucher                   | nilai_voucher | jumlah_voucher |input_dari   |input_sampai  | isi_halaman                     | 
-      | Tipe Semua Nama Voucher Testing Reda |Tipe Semua Nama Voucher Testing Reda | 111           |2               |18           |50            | voucher tipe semua Testing Reda |
+      | Tipe Semua Nama Voucher Testing Tia |Tipe Semua Nama Voucher Testing Tia | 111           |2               |18           |50            | voucher tipe semua Testing Tia |
 

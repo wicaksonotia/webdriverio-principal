@@ -36,5 +36,5 @@ Feature: 4. Flying Button Reguler (flying-button-reguler)
     
     Examples:
       | nama_spanduk                       | nama_halaman                       | isi_halaman                        |
-      | flying button reguler Testing Reda | flying button reguler Testing Reda | flying button reguler Testing Reda |
+      | flying button reguler Testing Tia | flying button reguler Testing Tia | flying button reguler Testing Tia |
 

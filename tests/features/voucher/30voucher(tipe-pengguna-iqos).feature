@@ -103,5 +103,5 @@ Feature: 30. B2C Voucher (voucher-tipe-pengguna-iqos)
 
     Examples:
       | nama_voucher                     | nama_lain_voucher                 | nilai_voucher |jumlah_voucher  |input_dari   |input_sampai  | isi_halaman                    | 
-      | Voucher Tipe IQOS Testing Reda   | Voucher Tipe IQOS Testing Reda    | 2500          |3               |18           |50            | Voucher Tipe IQOS Testing Reda |
+      | Voucher Tipe IQOS Testing Tia   | Voucher Tipe IQOS Testing Tia    | 2500          |3               |18           |50            | Voucher Tipe IQOS Testing Tia |
 

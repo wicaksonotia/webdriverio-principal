@@ -36,5 +36,5 @@ Feature: 3. Info SRC Reguler (info-src-reguler)
     
     Examples:
       | nama_spanduk                  | nama_halaman                  | isi_halaman                   |
-      | Info SRC Reguler Testing Reda | Info SRC Reguler Testing Reda | Info SRC Reguler Testing Reda |
+      | Info SRC Reguler Testing Tia | Info SRC Reguler Testing Tia | Info SRC Reguler Testing Tia |
 

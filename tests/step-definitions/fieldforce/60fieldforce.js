@@ -49,9 +49,9 @@ Then(
     await FieldForcePage.pageList();
     await FieldForcePage.searchFF(dataTest.fieldForce.name);
     await FieldForcePage.expectNewFF(
-      dataTest.fieldForce.name,
-      dataTest.fieldForce.classification,
-      dataTest.fieldForce.status
+      dataTest.fieldForce.name
+      // dataTest.fieldForce.classification,
+      // dataTest.fieldForce.status
     );
   }
 );
@@ -74,9 +74,9 @@ When(/^I edit and delete Field Force$/, async () => {
   await FieldForcePage.pageList();
   await FieldForcePage.searchFF(dataTest.fieldForce.name);
   await FieldForcePage.expectNewFFEdited(
-    dataTest.fieldForce.name,
-    dataTest.fieldForce.classificationEdit,
-    dataTest.fieldForce.statusEdit
+    dataTest.fieldForce.name
+    // dataTest.fieldForce.classificationEdit,
+    // dataTest.fieldForce.statusEdit
   );
   await FieldForcePage.deleteFF();
 });

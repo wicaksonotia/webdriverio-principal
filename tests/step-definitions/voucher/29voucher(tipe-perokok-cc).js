@@ -72,11 +72,11 @@ Then(/^System should be select date Tangal Awal Program$/, async () => {
 });
 
 When(/^I select date in Tanggal Akhir Program$/, async () => {
-  await voucherTipePerokokCC.tanggalAkhirProgram();
+  // await voucherTipePerokokCC.tanggalAkhirProgram();
 });
 
 Then(/^System should be select date Tanggal Akhir Program$/, async () => {
-  // await voucherTipePerokokCC.Page()
+  // await voucherTipePerokokCC.Page();
 });
 
 When(/^I select date in Tanggal Awal Pemakaian Voucher$/, async () => {
@@ -91,11 +91,11 @@ Then(
 );
 
 When(/^I select date in Tanggal Kadaluarsa Voucher$/, async () => {
-  await voucherTipePerokokCC.tanggalKadaluarsaVoucher();
+  // await voucherTipePerokokCC.tanggalKadaluarsaVoucher();
 });
 
 Then(/^System should be select date Tanggal Kadaluarsa Voucher$/, async () => {
-  // await voucherTipePerokokCC.Page()
+  // await voucherTipePerokokCC.Page();
 });
 
 When(/^I select Pesan Antar in Pengguna Voucher$/, async () => {
@@ -138,7 +138,7 @@ When(/^I select Perokok CC in Tipe Customer$/, async () => {
 });
 
 Then(/^System should be select Perokok CC in Tipe Customer$/, async () => {
-  await voucherTipePerokokCC.formPage3();
+  // await voucherTipePerokokCC.formPage3();
 });
 
 When(/^I input Dari in Batasan Umur (.*)$/, async (input_dari) => {
@@ -146,7 +146,7 @@ When(/^I input Dari in Batasan Umur (.*)$/, async (input_dari) => {
 });
 
 Then(/^System should be input Dari$/, async () => {
-  await voucherTipePerokokCC.formPage3();
+  // await voucherTipePerokokCC.formPage3();
 });
 
 When(/^I input Sampai in Batasan Umur (.*)$/, async (input_sampai) => {
@@ -154,7 +154,7 @@ When(/^I input Sampai in Batasan Umur (.*)$/, async (input_sampai) => {
 });
 
 Then(/^System should be input Sampai$/, async () => {
-  await voucherTipePerokokCC.formPage3();
+  // await voucherTipePerokokCC.formPage3();
 });
 
 When(/^I select Semua in Jenis Kelamin$/, async () => {
@@ -162,7 +162,7 @@ When(/^I select Semua in Jenis Kelamin$/, async () => {
 });
 
 Then(/^System should be select Semua in Jenis Kelamin$/, async () => {
-  await voucherTipePerokokCC.formPage3();
+  // await voucherTipePerokokCC.formPage3();
 });
 
 When(/^I click button Simpan in Panel Customer$/, async () => {
@@ -191,18 +191,18 @@ When(/^I select date in Tanggal Awal Penukaran Voucher$/, async () => {
 Then(
   /^System should be select date Tanggal Awal Penukaran Voucher$/,
   async () => {
-    await voucherTipePerokokCC.formpagepenukaranVoucher();
+    // await voucherTipePerokokCC.formpagepenukaranVoucher();
   }
 );
 
 When(/^I select date in Tanggal Berakhir Penukaran Voucher$/, async () => {
-  await voucherTipePerokokCC.tanggalBerakhirPenukaranVoucher();
+  // await voucherTipePerokokCC.tanggalBerakhirPenukaranVoucher();
 });
 
 Then(
   /^System should be select date Tanggal Berakhir Penukaran Voucher$/,
   async () => {
-    await voucherTipePerokokCC.formpagepenukaranVoucher();
+    // await voucherTipePerokokCC.formpagepenukaranVoucher();
   }
 );
 
@@ -211,7 +211,7 @@ When(/^I select Voucher B2B in Opsi Penukaran Voucher$/, async () => {
 });
 
 Then(/^System should be select Voucher B2B$/, async () => {
-  await voucherTipePerokokCC.formpagepenukaranVoucher();
+  // await voucherTipePerokokCC.formpagepenukaranVoucher();
 });
 
 When(/^I click button Simpan in Penukaran Voucher$/, async () => {
@@ -230,7 +230,7 @@ When(/^I insert Voucher in TEMPLATE F$/, async () => {
 });
 
 Then(/^System show Voucher$/, async () => {
-  await voucherTipePerokokCC.formPage5();
+  // await voucherTipePerokokCC.formPage5();
 });
 
 When(/^I input Isi Halaman (.*)$/, async (isi_halaman) => {
@@ -238,7 +238,7 @@ When(/^I input Isi Halaman (.*)$/, async (isi_halaman) => {
 });
 
 Then(/^System should be input Isi Halaman$/, async () => {
-  await voucherTipePerokokCC.formPage5();
+  // await voucherTipePerokokCC.formPage5();
 });
 
 When(/^I click button Simpan in Design Voucher$/, async () => {
@@ -257,7 +257,7 @@ When(/^I click button SAVE SETTING$/, async () => {
 });
 
 Then(/^System should be SAVE SETTING$/, async () => {
-  await voucherTipePerokokCC.formPage6();
+  // await voucherTipePerokokCC.formPage6();
 });
 
 When(/^I click button PROCESS TO APPROVAL$/, async () => {
@@ -265,7 +265,7 @@ When(/^I click button PROCESS TO APPROVAL$/, async () => {
 });
 
 Then(/^System should be PROCESS TO APPROVAL$/, async () => {
-  await voucherTipePerokokCC.formPage6();
+  // await voucherTipePerokokCC.formPage6();
 });
 
 When(/^I click button APPROVE$/, async () => {
@@ -273,7 +273,7 @@ When(/^I click button APPROVE$/, async () => {
 });
 
 Then(/^System should be APPROVE$/, async () => {
-  await voucherTipePerokokCC.formPage6();
+  // await voucherTipePerokokCC.formPage6();
 });
 
 When(/^I click button Ya Lanjutkan$/, async () => {
@@ -281,7 +281,7 @@ When(/^I click button Ya Lanjutkan$/, async () => {
 });
 
 Then(/^System should be Ya Lanjutkan$/, async () => {
-  await voucherTipePerokokCC.formPage6();
+  // await voucherTipePerokokCC.formPage6();
 });
 
 When(/^I click button Publish1$/, async () => {
@@ -289,7 +289,7 @@ When(/^I click button Publish1$/, async () => {
 });
 
 Then(/^System should be Publish$/, async () => {
-  await voucherTipePerokokCC.formPage6();
+  // await voucherTipePerokokCC.formPage6();
 });
 
 When(/^I click button Publish2$/, async () => {

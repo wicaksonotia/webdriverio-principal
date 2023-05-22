@@ -212,7 +212,7 @@ class crudPemenangdanUndian extends Page {
   async tanggalAwalPenukaranKupon() {
     await setStartEndDate(
       this.calendarAwalPenukaranKupon,
-      this.calendarTanggalBerakhir,
+      this.calendarBerakhirPenukaranKupon,
       this.popUpCalendar
     );
     // await this.calendarAwalPenukaranKupon.click()
@@ -229,7 +229,7 @@ class crudPemenangdanUndian extends Page {
   }
 
   async tanggalBerakhirPenukaranKupon() {
-    await setEndDate(this.calendarBerakhirPenukaranKupon, this.popUpCalendar);
+    // await setEndDate(this.calendarBerakhirPenukaranKupon, this.popUpCalendar);
     // await this.calendarBerakhirPenukaranKupon.click()
     // await this.popUpCalendar.waitForDisplayed()
     // await this.popUpCalendar.$$('tr')[2].$$('td')[0].$('div').click();

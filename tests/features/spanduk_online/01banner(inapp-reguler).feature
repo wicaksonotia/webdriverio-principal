@@ -33,5 +33,5 @@ Feature: 1. InApp Banner Reguler (inapp-reguler)
 
     Examples:
       | nama_spanduk                       | nama_halaman                       | isi_halaman                        |
-      | In App Banner Reguler Testing Reda | In App Banner Reguler Testing Reda | In App Banner Reguler Testing Reda |
+      | In App Banner Reguler Testing Tia | In App Banner Reguler Testing Tia | In App Banner Reguler Testing Tia |
 

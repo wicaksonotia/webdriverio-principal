@@ -89,9 +89,9 @@ class FormEmployeeMappingPage extends Page {
   async zone() {
     await expect(this.drpdwn[1]).toBeExisting();
     await this.drpdwn[1].click();
-    await this.drpdwnValue[6].waitForExist();
-    await expect(this.drpdwnValue[6]).toBeExisting();
-    await this.drpdwnValue[6].click();
+    await this.drpdwnValue[5].waitForExist();
+    await expect(this.drpdwnValue[5]).toBeExisting();
+    await this.drpdwnValue[5].click();
     await browser.pause(3000);
     await browser.keys("Escape");
     await this.titlePage.scrollIntoView();

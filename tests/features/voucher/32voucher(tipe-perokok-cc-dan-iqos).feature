@@ -106,5 +106,5 @@ Feature: 32. B2C Voucher (voucher-tipe-perokok-cc-dan-iqos)
 
     Examples:
       | nama_voucher                                  | nama_lain_voucher                              | nilai_voucher |jumlah_voucher  |input_dari   |input_sampai  | isi_halaman                                   | 
-      | Voucher Tipe Perokok CC dan IQOS Testing Reda | Voucher Tipe Perokok CC dan IQOS Testing Reda  | 2500          |3               |18           |50            | Voucher Tipe Perokok CC dan IQOS Testing Reda |
+      | Voucher Tipe Perokok CC dan IQOS Testing Tia | Voucher Tipe Perokok CC dan IQOS Testing Tia  | 2500          |3               |18           |50            | Voucher Tipe Perokok CC dan IQOS Testing Tia |
 

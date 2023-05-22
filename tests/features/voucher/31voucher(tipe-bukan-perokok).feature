@@ -103,5 +103,5 @@ Feature: 31. B2C Voucher (voucher-tipe-bukan-perokok)
 
     Examples:
       | nama_voucher                               | nama_lain_voucher                          | nilai_voucher |jumlah_voucher  |input_dari   |input_sampai  | isi_halaman                            | 
-      | Voucher Tipe Bukan Perokok Testing Reda    | Voucher Tipe Bukan Perokok Testing Reda    | 1255          |2               |18           |50            | voucher tipe Bukan Perokok Testing Reda|
+      | Voucher Tipe Bukan Perokok Testing Tia    | Voucher Tipe Bukan Perokok Testing Tia    | 1255          |2               |18           |50            | voucher tipe Bukan Perokok Testing Tia|
 

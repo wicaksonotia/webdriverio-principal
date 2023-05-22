@@ -306,7 +306,7 @@ class stwBatasanProduk1 extends Page {
   }
 
   async btnSimpanAudience() {
-    await this.buttonSimpanTabAudience[1].click();
+    await $("#btn-simpan").click();
     await browser.pause(2000);
   }
 
