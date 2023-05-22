@@ -85,6 +85,9 @@ class FormEmployeeMappingPage extends Page {
         await this.drpdwnValue[2].waitForExist()
         await expect(this.drpdwnValue[2]).toBeExisting()
         await this.drpdwnValue[2].click()
+        await browser.pause(3000)
+        await browser.keys("Escape")
+        await this.titlePage.scrollIntoView()
     }
 
     async area () {
@@ -115,6 +118,17 @@ class FormEmployeeMappingPage extends Page {
         await this.drpdwnMetodeValue[1].waitForExist()
         await expect(this.drpdwnMetodeValue[1]).toBeExisting()
         await this.drpdwnMetodeValue[1].click()
+    }
+
+    async metodeKoinPotonganBelanja() {
+        await this.drpdwnMetode[1].scrollIntoView()
+        await browser.pause(5000)
+        // await expect(this.drpdwnMetode).toBeExisting()
+        await this.drpdwnMetode[1].click()
+        // await browser.pause(3000)
+        await this.drpdwnMetodeValue[2].waitForExist()
+        await expect(this.drpdwnMetodeValue[2]).toBeExisting()
+        await this.drpdwnMetodeValue[2].click()
     }
 
     async submitForm () {

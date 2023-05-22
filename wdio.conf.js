@@ -150,9 +150,13 @@ exports.config = {
     //'./tests/features/spinthewheel/76create-push-notif-spinthewheel.feature'
     //'./tests/features/spinthewheel/77edit-push-notif-spinthewheel.feature'
     //'./tests/features/spinthewheel/110setup-stwmitra.feature'
+    
+    //'./tests/features/employeemapping/94crudemployeemapping(coin-potongan-belanja).feature'
+    './tests/features/koinpotonganbelanja/95createkoinpotonganbelanja(batasanproduk).feature'
+
     // tiawicaksono
     // './tests/features/kpisetting/63kpisetting.feature'
-    "./tests/features/kpisetting/5321kpigrouplist.feature",
+    //"./tests/features/kpisetting/5321kpigrouplist.feature",
   ],
   // Patterns to exclude.
   exclude: [
@@ -294,6 +298,7 @@ exports.config = {
       },
     ],
 
+    /*
     [
       video,
       {
@@ -316,6 +321,8 @@ exports.config = {
         addConsoleLogs: true,
       },
     ],
+
+    */
 
     // ['cucumberjs-json', {
     //     jsonFolder: './reports/cucumberjs-json/json',
@@ -447,9 +454,12 @@ exports.config = {
       //'./tests/step-definitions/spinthewheel/77edit-push-notif-spinthewheel.js'
       //'./tests/step-definitions/spinthewheel/110setup-stwmitra.js'
 
+      //'./tests/step-definitions/employeemapping/94crudemployeemapping(coin-potongan-belanja).js'
+      './tests/step-definitions/koinpotonganbelanja/95createkoinpotonganbelanja(batasanproduk).js'
+
       // tiawicaksono
       // './tests/step-definitions/kpisetting/63kpisetting.js'
-      "./tests/step-definitions/kpisetting/5321kpigrouplist.js",
+      //"./tests/step-definitions/kpisetting/5321kpigrouplist.js",
     ],
     // <boolean> show full backtrace for errors
     backtrace: false,
