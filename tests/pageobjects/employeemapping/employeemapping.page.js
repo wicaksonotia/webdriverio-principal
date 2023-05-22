@@ -142,38 +142,28 @@ class EmployeeMappingPage extends Page {
     await browser.pause(5000);
   }
 
-    async viewDetailATask (employee) {
-        await this.cellNamaEmployee.scrollIntoView()
-        console.log('List Employee Name: ')
-        const titleTask = await this.employee
-        titleTask.forEach(element => {
-            const tasks = element.getText()
-                // console.log(tasks)       //output: Promise { <pending> }
-                tasks.then(function(result) {
-                console.log(result)         //output: Employee Name list
-                if (String(result) == employee) {
-                    element.click()
-                }
-            })
-        })
-    }
+  async editTask() {
+    // await browser.execute(() => document.body.style.zoom='70%')
+    await browser.pause(3000);
+    await expect(this.btnEdit[0]).toBeExisting();
+    await this.btnEdit[0].click();
+  }
 
-    async editTask () { 
-        // await browser.execute(() => document.body.style.zoom='70%')
-        await browser.pause(3000)
-        await expect(this.btnEdit[0]).toBeExisting()
-        await this.btnEdit[0].click()
-    }
+  async deleteTask() {
+    // await browser.execute(() => document.body.style.zoom='70%')
+    await browser.pause(3000);
+    await expect(this.btnDelete[0]).toBeExisting();
+    await this.btnDelete[0].click();
+    await expect(this.btnConfirmDelete).toBeExisting();
+    await this.btnConfirmDelete.click();
+  }
 
-    async deleteTask () { 
-        // await browser.execute(() => document.body.style.zoom='70%')
-        await browser.pause(3000)
-        await expect(this.btnDelete[0]).toBeExisting()
-        await this.btnDelete[0].click()
-        await expect(this.btnConfirmDelete).toBeExisting()
-        await this.btnConfirmDelete.click()
-    }
-
+  async expectNewEmployeeRow1(employee, email, area, metode) {
+    await expect(this.employee[0]).toHaveText(employee);
+    await expect(this.email[0]).toHaveText(email);
+    await this.employee[0].click();
+    await browser.pause(5000);
+  }
     async expectNewEmployeeRow1 (employee,email,area,metode) {
         await expect(this.employee[0]).toHaveText(employee)
         await expect(this.email[0]).toHaveText(email)

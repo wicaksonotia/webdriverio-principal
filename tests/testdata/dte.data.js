@@ -257,7 +257,6 @@ module.exports = {
     employee2: "Reda",
     email: "sisda.utrujah@contracted.sampoerna.com",
     email2: "reda.meiningtiyas@weekendinc.com",
-
     area: "ZONENORTHSUM",
     area2: "SLSNTL",
     metodePB: "saldo pojok bayar",
