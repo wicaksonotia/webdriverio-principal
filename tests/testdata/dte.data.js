@@ -502,4 +502,11 @@ module.exports = {
     statusApproved: "approved",
     statusRejected: "rejected",
   },
+
+  coinpotonganbelanja: {
+    inputNama: "Koin potongan belanja batasi dengan produk testing reda",
+    inputCariGTP: "GTP REDA12",
+    inputBBP: "indomie goreng sate",
+    inputCariMitra: "BOT00152093",
+  },
 };
