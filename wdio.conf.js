@@ -156,9 +156,8 @@ exports.config = {
 
     // tiawicaksono
     // './tests/features/kpisetting/63kpisetting.feature'
-
     //"./tests/features/kpisetting/5321kpigrouplist.feature",
-
+    // "./tests/features/kpisetting/5321kpigrouplist.feature",
   ],
   // Patterns to exclude.
   exclude: [
@@ -370,6 +369,7 @@ exports.config = {
       // "./tests/step-definitions/audience/8export-import.js",
       // "./tests/step-definitions/audience/50importaudiencepersonalize.js",
       //"./tests/step-definitions/audience/51import200kaudiencepersonalize.js",
+      "./tests/step-definitions/audience/51import200kaudiencepersonalize.js",
       // "./tests/step-definitions/audience/52import1000kaudiencenonpersonalize.js",
       // "./tests/step-definitions/audience/57createaudiencemitranonpersonalize.js",
       // "./tests/step-definitions/approvalcoinadjustment/9approve.js",
@@ -462,7 +462,6 @@ exports.config = {
       // tiawicaksono
       // './tests/step-definitions/kpisetting/63kpisetting.js'
       //"./tests/step-definitions/kpisetting/5321kpigrouplist.js",
-
     ],
     // <boolean> show full backtrace for errors
     backtrace: false,
