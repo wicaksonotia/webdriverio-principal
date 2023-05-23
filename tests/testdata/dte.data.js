@@ -503,8 +503,10 @@ module.exports = {
   },
 
   coinpotonganbelanja: {
-    inputNama: "Koin potongan belanja batasi dengan produk testing reda",
-    inputCariGTP: "GTP REDA12",
+    inputNamaBP: "Koin potongan belanja batasi dengan produk testing reda",
+    inputNamaBK: "Koin potongan belanja batasi dengan kategori testing reda",
+    inputCariGTP1: "GTP REDA12",
+    inputCariGTP2: "GTP REDA11",
     inputBBP: "indomie goreng sate",
     inputCariMitra: "BOT00152093",
   },

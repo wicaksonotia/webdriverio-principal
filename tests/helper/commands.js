@@ -31,7 +31,7 @@ export const setStartEndDate = async (
 ) => {
   await formStartDate.click();
   await popUpCalendar.waitForExist();
-  await popUpCalendar.$$("tr")[4].$$("td")[1].$("div").click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
+  await popUpCalendar.$$("tr")[4].$$("td")[2].$("div").click(); //baris x kolom, contoh: 1,4: 6 Januari 2022
   await browser.pause(3000);
 
   await formEndDate.click();

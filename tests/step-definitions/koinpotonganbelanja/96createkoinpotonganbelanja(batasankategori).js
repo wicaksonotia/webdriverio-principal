@@ -8,9 +8,9 @@ const dataTest = require("../../testdata/dte.data");
 
 allureReporter.addLabel("Positive Case");
 allureReporter.addTestId(
-  "[PRINCIPAL] 95. Create Koin Potongan Belanja (Batasan Produk)"
+  "[PRINCIPAL] 96. Create Koin Potongan Belanja (Batasan Kategori)"
 );
-allureReporter.addFeature("Create Koin Potongan Belanja (Batasan Produk)");
+allureReporter.addFeature("Create Koin Potongan Belanja (Batasan Kategori)");
 
 Given(/^I am on the Koin Potongan Belanja page$/, async function () {
   await LoginPage.open();
@@ -40,10 +40,9 @@ Given(/^I am on the form Buat Koin Potongan Belanja page$/, async function () {
 When(
   /^I input form Detail Koin Potongan Belanja and submit$/,
   async function () {
-    await formKoinPotonganBelanjaPage.createKPB(
-      dataTest.coinpotonganbelanja.inputNamaBP,
-      dataTest.coinpotonganbelanja.inputCariGTP1,
-      dataTest.coinpotonganbelanja.inputBBP
+    await formKoinPotonganBelanjaPage.createKPK(
+      dataTest.coinpotonganbelanja.inputNamaBK,
+      dataTest.coinpotonganbelanja.inputCariGTP2
     );
   }
 );
@@ -59,7 +58,7 @@ When(
   /^I search and click button edit Koin Potongan Belanja$/,
   async function () {
     await koinPotonganBelanjaPage.search(
-      dataTest.coinpotonganbelanja.inputNamaBP
+      dataTest.coinpotonganbelanja.inputNamaBK
     );
     await koinPotonganBelanjaPage.Edit();
   }

@@ -150,9 +150,10 @@ exports.config = {
     //'./tests/features/spinthewheel/76create-push-notif-spinthewheel.feature'
     //'./tests/features/spinthewheel/77edit-push-notif-spinthewheel.feature'
     //'./tests/features/spinthewheel/110setup-stwmitra.feature'
-    
+
     //'./tests/features/employeemapping/94crudemployeemapping(coin-potongan-belanja).feature'
-    './tests/features/koinpotonganbelanja/95createkoinpotonganbelanja(batasanproduk).feature'
+    //'./tests/features/koinpotonganbelanja/95createkoinpotonganbelanja(batasanproduk).feature' //buat group trade program terlebih dahulu, edit date
+    './tests/features/koinpotonganbelanja/96createkoinpotonganbelanja(batasankategori).feature' //buat group trade program terlebih dahulu, edit date
 
     // tiawicaksono
     // './tests/features/kpisetting/63kpisetting.feature'
@@ -369,7 +370,7 @@ exports.config = {
       // "./tests/step-definitions/audience/8export-import.js",
       // "./tests/step-definitions/audience/50importaudiencepersonalize.js",
       //"./tests/step-definitions/audience/51import200kaudiencepersonalize.js",
-      "./tests/step-definitions/audience/51import200kaudiencepersonalize.js",
+      //"./tests/step-definitions/audience/51import200kaudiencepersonalize.js",
       // "./tests/step-definitions/audience/52import1000kaudiencenonpersonalize.js",
       // "./tests/step-definitions/audience/57createaudiencemitranonpersonalize.js",
       // "./tests/step-definitions/approvalcoinadjustment/9approve.js",
@@ -457,7 +458,8 @@ exports.config = {
       //'./tests/step-definitions/spinthewheel/110setup-stwmitra.js'
 
       //'./tests/step-definitions/employeemapping/94crudemployeemapping(coin-potongan-belanja).js'
-      './tests/step-definitions/koinpotonganbelanja/95createkoinpotonganbelanja(batasanproduk).js'
+      //'./tests/step-definitions/koinpotonganbelanja/95createkoinpotonganbelanja(batasanproduk).js'
+      './tests/step-definitions/koinpotonganbelanja/96createkoinpotonganbelanja(batasankategori).js'
 
       // tiawicaksono
       // './tests/step-definitions/kpisetting/63kpisetting.js'

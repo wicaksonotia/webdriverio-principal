@@ -36,6 +36,12 @@ class formKoinPotonganBelanjaPage extends Page {
   get optionBatasan() {
     return $$('[role="option"]');
   }
+  get checkBoxBatasiDenganKategori() {
+    return $('[formcontrolname="limit_by_category"]');
+  }
+  get dropdownBatasanBerdasarkanKategori() {
+    return $('[formcontrolname="category"]');
+  }
   get btnSimpan() {
     return $(
       '[class="confirmation-button mat-raised-button ng-star-inserted"]'
@@ -60,6 +66,7 @@ class formKoinPotonganBelanjaPage extends Page {
     await expect(this.titlePage).toBeDisplayed({ timeout: 600000 });
   }
 
+  //batasi dengan produk
   async createKPB(inputNama, inputCari, inputBBP) {
     await this.inputNamaProgram.setValue(inputNama);
     await browser.pause(2000);
@@ -78,6 +85,31 @@ class formKoinPotonganBelanjaPage extends Page {
     await this.inputBatasanBerdasarkanProduk.setValue(inputBBP);
     await browser.pause(2000);
     await this.optionBatasan[0].click();
+    await this.btnSimpan.click();
+  }
+
+  //batasi dengan kategori
+  async createKPK(inputNamaBK, inputCariBK) {
+    await this.inputNamaProgram.setValue(inputNamaBK);
+    await browser.pause(2000);
+    await this.selectGroupTradeProgram.click();
+    await this.inputCari[1].setValue(inputCariBK);
+    await browser.pause(2000);
+    await this.optionGTP[0].click();
+    await browser.keys("Escape");
+
+    // ==========untuk set starDate and endDate==========
+    await setStartEndDate(this.startDate, this.endDate, this.popUpCalendar);
+
+    await this.checkBoxBatasiDenganKategori.scrollIntoView();
+    await this.checkBoxBatasiDenganKategori.click();
+    await browser.pause(2000);
+    await this.dropdownBatasanBerdasarkanKategori.click();
+    await browser.pause(2000);
+    await this.optionBatasan[7].scrollIntoView();
+    await this.optionBatasan[7].click();
+    await browser.keys("Escape");
+    await browser.pause(1000);
     await this.btnSimpan.click();
   }
 
