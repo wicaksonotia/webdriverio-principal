@@ -7,51 +7,80 @@ import koinPotonganBelanjaPage from "../../pageobjects/koinpotonganbelanja/koinp
 const dataTest = require("../../testdata/dte.data");
 
 allureReporter.addLabel("Positive Case");
-allureReporter.addTestId("[PRINCIPAL] 95. Create Koin Potongan Belanja (Batasan Produk)");
+allureReporter.addTestId(
+  "[PRINCIPAL] 95. Create Koin Potongan Belanja (Batasan Produk)"
+);
 allureReporter.addFeature("Create Koin Potongan Belanja (Batasan Produk)");
 
 Given(/^I am on the Koin Potongan Belanja page$/, async function () {
-    await LoginPage.open()
-    await LoginPage.setLclStorage()
-    await MainmenuPage.open()
-    await LoginPage.acceptCookie()
-    await MainmenuPage.DropdownCN()
-    await MainmenuPage.KoinPotonganBelanja()
+  await LoginPage.open();
+  await LoginPage.setLclStorage();
+  await MainmenuPage.open();
+  await LoginPage.acceptCookie();
+  await MainmenuPage.DropdownCN();
+  await MainmenuPage.KoinPotonganBelanja();
 });
 
 When(/^I click button 'Tambah'$/, async function () {
-    await koinPotonganBelanjaPage.Page()
-    await koinPotonganBelanjaPage.Tambah()
+  await koinPotonganBelanjaPage.Page();
+  await koinPotonganBelanjaPage.Tambah();
 });
 
-Then(/^System should be leading to form Buat Koin Potongan Belanja page$/, async function () {
-    await formKoinPotonganBelanjaPage.Page()
-});
+Then(
+  /^System should be leading to form Buat Koin Potongan Belanja page$/,
+  async function () {
+    await formKoinPotonganBelanjaPage.Page();
+  }
+);
 
 Given(/^I am on the form Buat Koin Potongan Belanja page$/, async function () {
-
+  await formKoinPotonganBelanjaPage.Page();
 });
 
-When(/^I input form Detail Koin Potongan Belanja and submit$/, async function () {
+When(
+  /^I input form Detail Koin Potongan Belanja and submit$/,
+  async function () {
+    await formKoinPotonganBelanjaPage.createKPB(
+      dataTest.coinpotonganbelanja.inputNama,
+      dataTest.coinpotonganbelanja.inputCariGTP,
+      dataTest.coinpotonganbelanja.inputBBP
+    );
+  }
+);
 
-});
+Then(
+  /^System should be able to submit and leading to Koin Potongan Belanja page$/,
+  async function () {
+    await koinPotonganBelanjaPage.Page();
+  }
+);
 
-Then(/^System should be able to submit and leading to Koin Potongan Belanja page$/, async function () {
+When(
+  /^I search and click button edit Koin Potongan Belanja$/,
+  async function () {
+    await koinPotonganBelanjaPage.search(
+      dataTest.coinpotonganbelanja.inputNama
+    );
+    await koinPotonganBelanjaPage.Edit();
+  }
+);
 
-});
-
-When(/^I edit Koin Potongan Belanja$/, async function () {
-
-});
-
-Then(/^System should be leading to form Ubah Koin Potongan Belanja page$/, async function () {
-
-});
+Then(
+  /^System should be leading to Ubah Koin Potongan Belanja page$/,
+  async function () {
+    await formKoinPotonganBelanjaPage.Page();
+  }
+);
 
 When(/^I input form and submit$/, async function () {
-
+  await formKoinPotonganBelanjaPage.formPanelMitra(
+    dataTest.coinpotonganbelanja.inputCariMitra
+  );
 });
 
-Then(/^System should be able to submit form and leading to Koin Potongan Belanja page$/, async function () {
-
-});
+Then(
+  /^System should be able to submit form and leading to Koin Potongan Belanja page$/,
+  async function () {
+    await formKoinPotonganBelanjaPage.Page();
+  }
+);
