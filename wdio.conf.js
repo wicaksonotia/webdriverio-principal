@@ -150,11 +150,15 @@ exports.config = {
     //'./tests/features/spinthewheel/76create-push-notif-spinthewheel.feature'
     //'./tests/features/spinthewheel/77edit-push-notif-spinthewheel.feature'
     //'./tests/features/spinthewheel/110setup-stwmitra.feature'
-
     //'./tests/features/employeemapping/94crudemployeemapping(coin-potongan-belanja).feature'
     //'./tests/features/koinpotonganbelanja/95createkoinpotonganbelanja(batasanproduk).feature' //buat group trade program terlebih dahulu, edit date
-    './tests/features/koinpotonganbelanja/96createkoinpotonganbelanja(batasankategori).feature' //buat group trade program terlebih dahulu, edit date
-
+    //'./tests/features/koinpotonganbelanja/96createkoinpotonganbelanja(batasankategori).feature' //buat group trade program terlebih dahulu, edit date
+    // './tests/features/subgtp/97editsgpt.feature'
+    // './tests/features/subgtp/97editsgpt2.feature' //kerjakan misi di ayo toko dulu, lalu jalankan cron, cek di 
+    //"./tests/features/tradeprogram/90editbudget-tradeprogram.feature",
+    // './tests/features/templatetugas/5createtemplatetugas(paragraph).feature'
+    //'./tests/features/tasksequencing/13createtsm-semuatipe-kecualiirdanupc.feature'
+    './tests/features/tasksequencing/14createtsm-reblastoff-lebihdari1misi.feature'
     // tiawicaksono
     // './tests/features/kpisetting/63kpisetting.feature'
     //"./tests/features/kpisetting/5321kpigrouplist.feature",
@@ -456,11 +460,15 @@ exports.config = {
       //'./tests/step-definitions/spinthewheel/76create-push-notif-spinthewheel.js'
       //'./tests/step-definitions/spinthewheel/77edit-push-notif-spinthewheel.js'
       //'./tests/step-definitions/spinthewheel/110setup-stwmitra.js'
-
       //'./tests/step-definitions/employeemapping/94crudemployeemapping(coin-potongan-belanja).js'
       //'./tests/step-definitions/koinpotonganbelanja/95createkoinpotonganbelanja(batasanproduk).js'
-      './tests/step-definitions/koinpotonganbelanja/96createkoinpotonganbelanja(batasankategori).js'
-
+      //"./tests/step-definitions/koinpotonganbelanja/96createkoinpotonganbelanja(batasankategori).js",
+      //"./tests/step-definitions/subgtp/97editsgpt.js",
+      //'./tests/step-definitions/subgtp/97editsgpt2.js'
+      //"./tests/step-definitions/tradeprogram/90editbudget-tradeprogram.js",
+      // './tests/step-definitions/templatetugas/5createtemplatetugas(paragraph).js'
+      //  './tests/step-definitions/tasksequencing/13createtsm-semuatipe-kecualiirdanupc.js'
+      './tests/step-definitions/tasksequencing/14createtsm-reblastoff-lebihdari1misi.js'
       // tiawicaksono
       // './tests/step-definitions/kpisetting/63kpisetting.js'
       //"./tests/step-definitions/kpisetting/5321kpigrouplist.js",

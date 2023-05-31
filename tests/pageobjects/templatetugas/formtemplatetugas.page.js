@@ -135,6 +135,7 @@ class FormTemplateTugasPage extends Page {
   get addQuestions() {
     return $("#add-question");
   }
+
   get cbKodeQR() {
     return $$('[class="mat-checkbox-inner-container"]');
   }
@@ -369,6 +370,32 @@ class FormTemplateTugasPage extends Page {
     return $$("#btnDeleteQuestion");
   }
 
+  //paragraph
+  get inputMinCharacter() {
+    return $$('[formcontrolname="min_char"]');
+  }
+  get inputMaxCharacter() {
+    return $$('[formcontrolname="max_char"]');
+  }
+  get scNumber() {
+    return $('[class="mb-8"]');
+  }
+  get checkboxIncludeNumber() {
+    return $$('[formcontrolname="include_number"]');
+  }
+  get checkboxIncludeSpecialCharacter() {
+    return $$('[formcontrolname="include_special_char"]');
+  }
+  get inputSpecialCharacter() {
+    return $('[placeholder="Character"]');
+  }
+  get dropdownLinkToProfile() {
+    return $$("#selectLinkProfile");
+  }
+  get optionLinkToProfie() {
+    return $$("#options");
+  }
+
   //a method to encapsule automation code to interact with the page
   async page() {
     await browser.waitUntil(async () => await this.titlePage.isDisplayed(), {
@@ -428,6 +455,46 @@ class FormTemplateTugasPage extends Page {
   }
 
   async selectKategori(
+    kategoriToolbox,
+    tipeMisi,
+    internalKategoriMisi,
+    kategoriMisi,
+    projectMisi
+  ) {
+    await this.addMaterial.scrollIntoView();
+    await browser.pause(10000);
+    await this.dropdownKategoriToolbox.click();
+    await expect(this.searchKategoriToolbox).toBeDisplayed();
+    await this.searchKategoriToolbox.setValue(kategoriToolbox);
+    await browser.pause(2000);
+    await this.selectKategoriToolbox.click();
+
+    await this.dropdownTipeMisi.click();
+    await expect(this.searchTipeMisi).toBeDisplayed();
+    await this.searchTipeMisi.setValue(tipeMisi);
+    await browser.pause(2000);
+    await this.selectTipeMisi.click();
+
+    await this.dropdownInternalKategoriMisi.click();
+    await expect(this.searchInternalKategoriMisi).toBeDisplayed();
+    await this.searchInternalKategoriMisi.setValue(internalKategoriMisi);
+    await browser.pause(2000);
+    await this.selectInternalKategoriMisi.click();
+
+    await this.dropdownKategoriMisi.click();
+    await expect(this.searchKategoriMisi).toBeDisplayed();
+    await this.searchKategoriMisi.setValue(kategoriMisi);
+    await browser.pause(2000);
+    await this.selectKategoriMisi.click();
+
+    await this.dropdownProjectMisi.click();
+    await expect(this.searchProjectMisi).toBeDisplayed();
+    await this.searchProjectMisi.setValue(projectMisi);
+    await browser.pause(2000);
+    await this.selectProjectMisi.click();
+  }
+
+  async selectKategori5(
     kategoriToolbox,
     tipeMisi,
     internalKategoriMisi,
@@ -538,7 +605,14 @@ class FormTemplateTugasPage extends Page {
     await this.tipeQuestionParagraf.click();
     await this.jawabanPanjang.scrollIntoView();
   }
-
+  async selectQstParagraf() {
+    //Scenario 32
+    await browser.pause(2000);
+    await this.dropdownTipeQuestion[1].click();
+    await this.tipeQuestionParagraf.waitForExist();
+    await this.tipeQuestionParagraf.click();
+    await this.jawabanPanjang.scrollIntoView();
+  }
   async selectQstParagraf55() {
     //Scenario 55
     await browser.pause(2000);
@@ -1155,6 +1229,55 @@ class FormTemplateTugasPage extends Page {
     await this.previewBgMisi.scrollIntoView();
     await expect(this.previewBgMisi).toBeDisplayed();
     // await this.selectColorFontBgMisi.click() //element not found
+  }
+
+  //skenario 5
+  async selectQstParagraf1() {
+    await browser.pause(2000);
+    await this.dropdownTipeQuestion[0].scrollIntoView();
+    await this.dropdownTipeQuestion[0].click();
+    await this.tipeQuestionParagraf.waitForExist();
+    await this.tipeQuestionParagraf.click();
+    await this.jawabanPanjang.scrollIntoView();
+  }
+
+  //skenario 5
+  async setNextQuestion1(inputQuestion) {
+    await this.textareaQuestion1[1].scrollIntoView();
+    await browser.pause(3000);
+    await this.textareaQuestion1[1].setValue(inputQuestion);
+    await browser.pause(2000);
+  }
+
+  async minCharacter(inputMin) {
+    //await this.inputMinCharacter[0].scrollIntoView();
+    await this.inputMinCharacter[0].setValue(inputMin);
+    await browser.pause(2000);
+  }
+
+  async maxCharacter(inputMax) {
+    await this.inputMaxCharacter[0].setValue(inputMax);
+    await browser.pause(2000);
+  }
+
+  async includeNumber() {
+    await this.scNumber.scrollIntoView();
+    //await this.checkboxIncludeNumber.toBeClickable();
+    await this.checkboxIncludeNumber[0].click();
+    await browser.pause(2000);
+  }
+
+  async includeSpecialCharacter(inputCharacter) {
+    await this.checkboxIncludeSpecialCharacter[0].click();
+    await browser.pause(1000);
+    await this.inputSpecialCharacter.setValue(inputCharacter);
+  }
+
+  async linkToProfile() {
+    await this.dropdownLinkToProfile[0].click();
+    await browser.pause(2000);
+    await this.optionLinkToProfie[1].click();
+    await browser.pause(2000);
   }
 
   async save() {

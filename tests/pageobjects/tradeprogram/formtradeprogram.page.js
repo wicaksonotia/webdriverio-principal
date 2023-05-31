@@ -70,6 +70,9 @@ class FormTradeProgramPage extends Page {
   get btnSimpan() {
     return $("#btn-simpan-trade");
   }
+  get btnSimpan2() {
+    return $('[class="confirmation-button mat-raised-button"]');
+  }
   get btnCekDetail() {
     return $("");
   }
@@ -127,11 +130,49 @@ class FormTradeProgramPage extends Page {
     // await browser.pause(3000);
   }
 
+  async createTP1(namaGTP, namaSGTP, namaTP, danaTP) {
+    await browser.pause(10000);
+    await this.dropdownGroupTradeProgram.scrollIntoView();
+    await browser.pause(3000);
+    await this.dropdownGroupTradeProgram.click();
+    await this.searchGroupTradeProgram.waitForExist();
+    await this.searchGroupTradeProgram.setValue(namaGTP);
+    await browser.pause(3000);
+    await this.selectGroupTradeProgram[0].click();
+    await this.searchGroupTradeProgram.waitForExist({ reverse: true });
+    await this.dropdownSubGroupTradeProgram.click();
+    await this.searchSubGroupTradeProgram.waitForExist();
+    await this.searchSubGroupTradeProgram.setValue(namaSGTP);
+    await browser.pause(3000);
+    await this.selectSubGroupTradeProgram[0].click();
+    await this.searchSubGroupTradeProgram.waitForExist({ reverse: true });
+    await this.namaTradeProgram.scrollIntoView();
+    await this.namaTradeProgram.setValue(namaTP);
+    // ==========untuk set starDate and endDate==========
+    await setStartEndDate(this.startDate, this.endDate, this.popUpCalendar);
+    await browser.pause(3000);
+    await this.danaTradeProgram.setValue(danaTP);
+    await setEndDate(this.expiredCoin, this.popUpCalendar);
+  }
+
+  async editDana(editDanaTP) {
+    await this.danaTradeProgram.scrollIntoView();
+    await this.danaTradeProgram.clearValue();
+    //await browser.pause(2000);
+    await this.danaTradeProgram.setValue(editDanaTP);
+    //await browser.pause(1000);
+  }
   async submit() {
     await expect(this.btnSimpan).toBeClickable();
     await this.btnSimpan.click();
   }
 
+  async submit1() {
+    await this.btnSimpan2.scrollIntoView();
+    await expect(this.btnSimpan2).toBeClickable();
+    await this.btnSimpan2.click();
+    await browser.pause(5000);
+  }
   async cekDetail() {
     await this.btnCekDetail.click();
   }

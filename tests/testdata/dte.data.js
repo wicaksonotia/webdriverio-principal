@@ -20,6 +20,16 @@ module.exports = {
     namaLainMisi3: "HWKND - Misi 02",
     deskripsiTugas3: "HWKND - Misi 02",
 
+    //skenario 5
+    judulTugas5: "Misi paragraf reda",
+    namaLainMisi5: "paragraf",
+    deskripsiTugas5: "paragraf",
+
+    addPertanyaan1: "input minimal karakter 3",
+    inputMinCharacter: "3",
+    inputMaxCharacter: "3",
+    inputSpecialCharacter: "@#$%",
+
     //Scenario 2, 3, 31
     kategoriToolbox2: "Test Weekend",
     tipeMisi2: "Test Weekend",
@@ -73,6 +83,9 @@ module.exports = {
     searchByName3: "Template Planogram Stock Check IR Hanifah Wknd",
     searchByName4: "Misi4-Wknd", // Scenario 4
     searchByName5: "Misi5-Wknd", // Scenario 5
+    searchByName13: "semua tipe min upc dan IR", //skenario13
+    searchByName14: "link to profile - paragraf, array, angka", //skenario14
+    searchByName142: "paragraf, jawaban singkat, array - tanpa validasi", //skenario14
     searchByName16: "Test IR Non Cigarette - Planogram Hanifah Wknd", // Scenario 16
     searchByName17: "Task Based 03122020 - Wknd", //Scenario 17, 19
     searchByName18: "QuizTTWknd1", //Scenario 18    Quiz from Nurul
@@ -143,6 +156,12 @@ module.exports = {
     namaTP16: "HWknd-TPIR2604", //Scenario 16: TradeIRWknd1
     namaTP18: "TPQuizWknd1", //Scenario 18: TradeQuizWknd18, 19: tradequiz123
     danaTP: "10000000",
+
+    namaGTP: "GTP REDA 90",
+    namaSGPT: "SGTP REDA TESTING 90",
+    inputNamaTP: "TRADE PROGRAM EDIT reda",
+    inputDANATP: "100",
+    editDANATP: "200",
   },
   pengaturJadwalProgram: {
     //
@@ -181,6 +200,7 @@ module.exports = {
     // misi/tantangan
     fileImportAudience: "../files-to-upload/audience.xlsx",
     audienceToko: "HWKND-Toko", //Test Case 4, 5, 16, 17, 18, 19, 42   HWknd-Audience1  audience234  AudienceWknd1  HanifahWknd-Audience1
+    audienceToko2: "audience toko naurah nazhifah",
   },
   dteAutomation: {
     typeDC: "Digital Coupon",
@@ -277,6 +297,20 @@ module.exports = {
     approver: "Sisda",
     status: "active",
     statusEdit: "inactive",
+
+    cariByNama1: "SUB GPT Reda Testing",
+    cariByNamaEdit: "SUB GPT Reda Testing Edit",
+    cariByNamaEdit2: "Sub GPT Reda Edit",
+    namaSGPT: "SGPT Reda Edit",
+    wbsSGPT: "WBS Reda Testing",
+    CCSGPT: "CC Reda Testing",
+    glAccount: "GL Reda Testing",
+    ratePPH: "20",
+    ratePPH2: "30",
+    approverSGPT1: "Reda",
+    approverSGPT2: "Sisda",
+    approverSGPT3: "Shabrina",
+    approverSGPT4: "Tia Wicaksono",
   },
   XP: {
     startDate: "19-05-2023 00:00:00",
@@ -423,6 +457,43 @@ module.exports = {
     coinSubmission5: "4",
     coinVerification5: "4",
 
+    //Scenario 13
+    nameTask13: "create tsm tipe kecuali upc dan ir",
+    coinSub1: "4",
+    coinVer1: "4",
+    coinSub2: "4",
+    coinVer2: "4",
+    coinSub3: "4",
+    coinVer3: "4",
+    coinSub4: "4",
+    coinVer4: "4",
+    coinSub5: "4",
+    coinVer5: "4",
+    coinSub6: "4",
+    coinVer6: "4",
+    coinSub7: "4",
+    coinVer7: "4",
+    coinSub8: "4",
+    coinVer8: "4",
+    coinSub9: "4",
+    coinVer9: "4",
+    coinSub10: "4",
+    coinVer10: "4",
+    coinSub11: "4",
+    coinVer11: "4",
+    coinSub12: "4",
+    coinVer12: "4",
+    coinSub13: "4",
+    coinVer13: "4",
+    coinSub14: "4",
+    coinVer14: "4",
+
+    //Scenario 14
+    nameTask14: "test reda reblast off",
+    coinSubmission14: "4",
+    coinVerification14: "4",
+    waktuTunggu: "1",
+
     // Scenario 16 - IR
     nameTask16: "HWKND-TaskIR 2604",
     coinSubmission16: "4", //
@@ -498,6 +569,7 @@ module.exports = {
   },
   coinRedemptionApproval: {
     GTP: "GTP Sisda",
+    SGTP: "Sub GPT Reda Edit",
     statusApproved: "approved",
     statusRejected: "rejected",
   },

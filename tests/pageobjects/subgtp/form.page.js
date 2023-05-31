@@ -1,122 +1,228 @@
-import ChromeDriverService from 'wdio-chromedriver-service';
-import Page from '../page';
-const path = require('path');
+import ChromeDriverService from "wdio-chromedriver-service";
+import Page from "../page";
+const path = require("path");
 
 //sub page containing specific selectors and methods for a specific page
 class FormSubGTPPage extends Page {
+  //define selectors using getter methods
+  get titlePage() {
+    return $("#contentTitle");
+  }
 
-    //define selectors using getter methods
-    get titlePage () { return $('#contentTitle') }
-    
-    get btnSimpan () { return $('#btnSave') }
+  get btnSimpan() {
+    return $("#btnSave");
+  }
 
-    get inpName () { return $('#field-name') }
-    get inpWbs () { return $('#field-wbs') }
-    get inpCostCenter () { return $('#field-cost_center') }
-    get inpGLAccount () { return $('#field-gl_account') }
-    get inpPPH () { return $('#field-rate_pph') }
-    get inpApprover () { return $('[id="field-approvers[0].approver_name"]') }
-    get drpdwnValueApprover () { return $('[value="sisda"][aria-activedescendant="field-approver_name-option-1"][aria-controls="field-approver_name-popup"]') }
-    get toggleStatus () { return $('#fieldSwitch') }
-    
-    //Notifikasi Tambahan
-    get notif () { return $('#notifMessage') }
+  get inpName() {
+    return $("#field-name");
+  }
+  get inpWbs() {
+    return $("#field-wbs");
+  }
+  get inpCostCenter() {
+    return $("#field-cost_center");
+  }
+  get inpGLAccount() {
+    return $("#field-gl_account");
+  }
+  get inpPPH() {
+    return $("#field-rate_pph");
+  }
+  get inpApprover() {
+    return $('[id="field-approvers[0].approver_name"]');
+  }
+  get btnClearApprover() {
+    return $(
+      '[class="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"][type="button"]'
+    );
+  }
+  get inpApprover2() {
+    return $('[id="field-approvers[1].approver_name"]');
+  }
+  get inpApprover3() {
+    return $('[id="field-approvers[2].approver_name"]');
+  }
+  get btnTambahApprover() {
+    return $$('[class="MuiButtonBase-root MuiIconButton-root"][type="button"]');
+  }
+  get btnKurangApprover() {
+    return $$('[class="MuiButtonBase-root MuiIconButton-root"][type="button"]');
+  }
+  get drpdwnValueApprover() {
+    return $(
+      '[value="sisda"][aria-activedescendant="field-approver_name-option-1"][aria-controls="field-approver_name-popup"]'
+    );
+  }
+  get toggleStatus() {
+    return $("#fieldSwitch");
+  }
 
-    //a method to encapsule automation code to interact with the page
-    async page () {
-        await browser.switchToParentFrame()
-        await browser.pause(3000)
-        await browser.switchToFrame(0)
-        await browser.pause(5000)
-        await browser.waitUntil(
-            async () => (await (this.titlePage).isDisplayed()),
-            {
-                timeout: 60000,
-                timeoutMsg: 'expected title page not displayed after 60s'
-            }
-        )
-        await expect(this.titlePage).toBeDisplayed({timeout:6000})
-    }
+  //Notifikasi Tambahan
+  get notif() {
+    return $("#notifMessage");
+  }
 
-    async pageCreate () {
-        await expect(this.titlePage).toHaveText('Buat Sub Group Trade Program')
-        await expect(browser).toHaveUrlContaining('dte/sub-group-trade-program/create')
-    }
+  //a method to encapsule automation code to interact with the page
+  async page() {
+    await browser.switchToParentFrame();
+    await browser.pause(3000);
+    await browser.switchToFrame(0);
+    await browser.pause(5000);
+    await browser.waitUntil(async () => await this.titlePage.isDisplayed(), {
+      timeout: 60000,
+      timeoutMsg: "expected title page not displayed after 60s",
+    });
+    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+  }
 
-    async pageDetail () {
-        await expect(this.titlePage).toHaveText('Sub Group Trade Program')
-        // await expect(browser).toHaveUrlContaining('dte/sub-group-trade-program/detail')
-    }
+  async pageCreate() {
+    await expect(this.titlePage).toHaveText("Buat Sub Group Trade Program");
+    await expect(browser).toHaveUrlContaining(
+      "dte/sub-group-trade-program/create"
+    );
+  }
 
-    async pageEdit () {
-        await browser.switchToParentFrame()
-        await browser.pause(3000)
-        await browser.switchToFrame(0)
-        await browser.pause(5000)
-        await browser.waitUntil(
-            async () => (await (this.titlePage).isDisplayed()),
-            {
-                timeout: 60000,
-                timeoutMsg: 'expected title page not displayed after 60s'
-            }
-        )
-        await expect(this.titlePage).toHaveText('Ubah Sub Group Trade Program')
-        // await expect(browser).toHaveUrlContaining('dte/sub-group-trade-program/edit')
-    }
+  async pageDetail() {
+    await expect(this.titlePage).toHaveText("Sub Group Trade Program");
+    // await expect(browser).toHaveUrlContaining('dte/sub-group-trade-program/detail')
+  }
 
-    async name (employeeName) {
-        await this.inpName.setValue(employeeName)
-        await browser.pause(2000)
-    }
+  async pageEdit() {
+    await browser.switchToParentFrame();
+    await browser.pause(3000);
+    await browser.switchToFrame(0);
+    await browser.pause(5000);
+    await browser.waitUntil(async () => await this.titlePage.isDisplayed(), {
+      timeout: 60000,
+      timeoutMsg: "expected title page not displayed after 60s",
+    });
+    await expect(this.titlePage).toHaveText("Ubah Sub Group Trade Program");
+    // await expect(browser).toHaveUrlContaining('dte/sub-group-trade-program/edit')
+  }
 
-    async clearName () {
-        await this.inpName.clearValue()
-    }
+  async name(employeeName) {
+    await this.inpName.setValue(employeeName);
+    await browser.pause(2000);
+  }
 
-    async wbs (wbs) {
-        await this.inpWbs.setValue(wbs)
-    }
+  async clearName() {
+    await this.inpName.clearValue();
+  }
 
-    async cost (cost) {
-        await this.inpCostCenter.setValue(cost)
-    }
+  async clearPPH() {
+    await this.inpPPH.clearValue();
+  }
 
-    async gl (gl) {
-        await this.inpGLAccount.setValue(gl)
-    }
+  async wbs(wbs) {
+    await this.inpWbs.setValue(wbs);
+  }
 
-    async pph (pph) {
-        await this.inpPPH.setValue(pph)
-    }
+  async cost(cost) {
+    await this.inpCostCenter.setValue(cost);
+  }
 
-    async approver (approver) {
-        await this.inpApprover.scrollIntoView()
-        await this.inpApprover.addValue(approver)
-        await browser.pause(5000)
-        await browser.keys("Enter")
-        // await this.drpdwnValueApprover.waitForExist()
-        // await this.drpdwnValueApprover.click()
-    }
+  async gl(gl) {
+    await this.inpGLAccount.setValue(gl);
+  }
 
-    async status () {
-        await this.toggleStatus.click()
-    }
+  async pph(pph) {
+    await this.inpPPH.setValue(pph);
+  }
 
-    async submitForm () {
-        await this.btnSimpan.waitForClickable();
-        await expect(this.btnSimpan).toBeClickable()
-        await this.btnSimpan.click()
-        await browser.pause(5000)
-    }
+  async clearApprover() {
+    await this.inpApprover.addValue(" ");
+    await this.btnClearApprover.click();
+    await browser.pause(2000);
+  }
+  async approver(approver) {
+    await this.inpApprover.scrollIntoView();
+    await this.inpApprover.addValue(approver);
+    await browser.pause(5000);
+    await browser.keys("Enter");
+    // await this.drpdwnValueApprover.waitForExist()
+    // await this.drpdwnValueApprover.click()
+  }
 
-    async notification () {
-        await this.notif.waitForExist();
-    }
+  async approver1(approver1) {
+    await this.inpApprover.scrollIntoView();
+    await this.inpApprover.addValue(approver1);
+    await browser.pause(5000);
+    await browser.keys("Enter");
+    // await this.drpdwnValueApprover.waitForExist()
+    // await this.drpdwnValueApprover.click()
+  }
 
-    //overwrite specifc options to adapt it to page object
-    open () {
-        return super.open('dte/sub-group-trade-program/create');
-    }
+  async scApprover() {
+    await this.inpApprover.scrollIntoView();
+  }
+
+  async approver2(approver2) {
+    //await this.inpApprover2.scrollIntoView();
+    await this.inpApprover2.addValue(approver2);
+    await browser.pause(5000);
+    await browser.keys("Enter");
+    // await this.drpdwnValueApprover.waitForExist()
+    // await this.drpdwnValueApprover.click()
+  }
+
+  async approver3(approver3) {
+    await this.inpApprover3.scrollIntoView();
+    await this.inpApprover3.addValue(approver3);
+    await browser.pause(5000);
+    await browser.keys("Enter");
+    // await this.drpdwnValueApprover.waitForExist()
+    // await this.drpdwnValueApprover.click()
+  }
+
+  async tambahApprover1() {
+    await this.inpApprover.scrollIntoView();
+    await this.btnTambahApprover[0].click();
+  }
+
+  async tambahApprover2() {
+    await this.inpApprover.scrollIntoView();
+    await this.btnTambahApprover[2].click();
+  }
+  async tambahApprover3() {
+    await this.inpApprover.scrollIntoView();
+    await this.btnTambahApprover[3].click();
+  }
+
+  async kurangApprover1() {
+    await this.btnKurangApprover[0].click();
+    await browser.pause(3000);
+  }
+
+  async kurangApprover2() {
+    await this.btnKurangApprover[1].click();
+    await browser.pause(3000);
+  }
+  async kurangApprover3() {
+    await this.btnKurangApprover[1].click();
+    await browser.pause(3000);
+  }
+  async status() {
+    await this.toggleStatus.scrollIntoView();
+    await this.toggleStatus.click();
+    await browser.pause(2000);
+  }
+
+  async submitForm() {
+    await this.btnSimpan.scrollIntoView();
+    await this.btnSimpan.waitForClickable();
+    await expect(this.btnSimpan).toBeClickable();
+    await this.btnSimpan.click();
+    await browser.pause(5000);
+  }
+
+  async notification() {
+    await this.notif.waitForExist();
+  }
+
+  //overwrite specifc options to adapt it to page object
+  open() {
+    return super.open("dte/sub-group-trade-program/create");
+  }
 }
 
 export default new FormSubGTPPage();

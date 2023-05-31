@@ -28,6 +28,9 @@ class MissionBuilderPage extends Page {
   get btnSplitDecision() {
     return $("#btn-split_decision");
   }
+  get btnYaTidak() {
+    return $$('[style="font-size: 12px; text-decoration: none;"]');
+  }
   get btnWaktuTunggu() {
     return $("#btn-tunggu");
   }
@@ -38,9 +41,34 @@ class MissionBuilderPage extends Page {
   get cardMission() {
     return $("#card-mission");
   } //pas edit belum ada id-nya
+
   get cardMissionEdit() {
     return $$("div.cardContainer");
   }
+
+  get cardTime() {
+    return $("#card-time");
+  }
+
+  get inputWaktuTunggu() {
+    return $('[placeholder="Waktu Tunggu"]');
+  }
+
+  get dropdownTipe() {
+    return $('[formcontrolname="type"]');
+  }
+
+  get optionJam() {
+    return $('[value="hour"]');
+  }
+
+  get btnSimpanWaitingPeriode() {
+    return $('[class="mat-raised-button mat-success"]');
+  }
+  get cardMission2() {
+    return $$("#card-mission");
+  }
+
   get cardFinish() {
     return $("#card-finish");
   }
@@ -131,6 +159,12 @@ class MissionBuilderPage extends Page {
   get coinVerification() {
     return $("#coinVerification");
   }
+  get coinSubmission1() {
+    return $$('[formcontrolname="coin_submission"]');
+  } //input[formcontrolname="coin_submission"]
+  get coinVerification1() {
+    return $$('[formcontrolname="coin_verification"]');
+  }
   get XPSubmission() {
     return $('[placeholder="XP Submission"]');
   }
@@ -142,6 +176,9 @@ class MissionBuilderPage extends Page {
   }
   get btnBatalSetMisi() {
     return $("#btn-cancel-card-mission");
+  }
+  get checkboxVerificationPerQst() {
+    return $("#verification-per-question");
   }
 
   //a method to encapsule automation code to interact with the page
@@ -188,11 +225,79 @@ class MissionBuilderPage extends Page {
     await browser.pause(3000);
   }
 
+  async createMissionBuilder2() {
+    await this.btnMisi.waitForClickable();
+    await expect(this.btnMisi).toBeClickable();
+    await this.btnMisi.click();
+    await browser.pause(3000);
+    await this.btnSplitDecision.waitForClickable();
+    await expect(this.btnSplitDecision).toBeClickable();
+    await this.btnSplitDecision.click();
+    await browser.pause(3000);
+    await this.btnYaTidak[0].scrollIntoView();
+    await this.btnYaTidak[0].click();
+    await browser.pause(3000);
+    await this.btnMisi.waitForClickable();
+    await expect(this.btnMisi).toBeClickable();
+    await this.btnMisi.click();
+    await browser.pause(3000);
+    await expect(this.cardMission).toBeDisplayed({ timeout: 6000 });
+    await this.btnEnd.waitForClickable();
+    await expect(this.btnEnd).toBeClickable();
+    await this.btnEnd.click();
+    await expect(this.cardFinish).toBeDisplayed({ timeout: 6000 });
+    await browser.pause(3000);
+    await this.btnYaTidak[1].click();
+    await browser.pause(3000);
+    await this.btnWaktuTunggu.waitForClickable();
+    await expect(this.btnWaktuTunggu).toBeClickable();
+    await this.btnWaktuTunggu.click();
+    await expect(this.cardMission).toBeDisplayed({ timeout: 6000 });
+    await this.btnEnd.waitForClickable();
+    await expect(this.btnEnd).toBeClickable();
+    await this.btnEnd.click();
+    await browser.pause(3000);
+  }
+
+  async verificationPerQuestion() {
+    await this.checkboxVerificationPerQst.waitForClickable();
+    await this.checkboxVerificationPerQst.click();
+  }
+
   async setMission() {
     await this.cardMission.waitForClickable();
     await expect(this.cardMission).toBeClickable();
     await this.cardMission.doubleClick();
     await this.headerCardMission.waitForDisplayed();
+    await browser.pause(3000);
+  }
+
+  async setMission2() {
+    await this.cardMission2[1].waitForClickable();
+    await expect(this.cardMission2[1]).toBeClickable();
+    await this.cardMission2[1].doubleClick();
+    await this.headerCardMission.waitForDisplayed();
+    await browser.pause(3000);
+  }
+
+  async waitingPeriod() {
+    await this.cardTime.waitForClickable();
+    await expect(this.cardTime).toBeClickable();
+    await this.cardTime.doubleClick();
+    await this.cardTime.waitForDisplayed();
+    await browser.pause(3000);
+  }
+
+  async setWaitingPeriod(inputWaktu) {
+    await this.inputWaktuTunggu.setValue(inputWaktu);
+    await browser.pause(2000);
+    await this.dropdownTipe.waitForClickable();
+    await this.dropdownTipe.click();
+    await browser.pause(2000);
+    await this.optionJam.scrollIntoView();
+    await this.optionJam.click();
+    await browser.pause(2000);
+    await this.btnSimpanWaitingPeriode.click();
     await browser.pause(3000);
   }
 
@@ -248,6 +353,101 @@ class MissionBuilderPage extends Page {
   async setVerifikasiFF() {
     await this.verifikasiFF.waitForClickable();
     await this.verifikasiFF.click();
+  }
+
+  //Scenario 13
+  async setCoin13(
+    coinSubmission1,
+    coinVerification1,
+    coinSubmission2,
+    coinVerification2,
+    coinSubmission3,
+    coinVerification3,
+    coinSubmission4,
+    coinVerification4,
+    coinSubmission5,
+    coinVerification5,
+    coinSubmission6,
+    coinVerification6,
+    coinSubmission7,
+    coinVerification7,
+    coinSubmission8,
+    coinVerification8,
+    coinSubmission9,
+    coinVerification9,
+    coinSubmission10,
+    coinVerification10,
+    coinSubmission11,
+    coinVerification11,
+    coinSubmission12,
+    coinVerification12,
+    coinSubmission13,
+    coinVerification13,
+    coinSubmission14,
+    coinVerification14
+  ) {
+    await this.coinSubmission1[0].scrollIntoView();
+    await this.coinSubmission1[0].setValue(coinSubmission1);
+    await this.coinVerification1[0].setValue(coinVerification1);
+    await this.coinSubmission1[1].scrollIntoView();
+    await this.coinSubmission1[1].setValue(coinSubmission2);
+    await this.coinVerification1[1].setValue(coinVerification2);
+    await this.coinSubmission1[2].scrollIntoView();
+    await this.coinSubmission1[2].setValue(coinSubmission3);
+    await this.coinVerification1[2].setValue(coinVerification3);
+    await this.coinSubmission1[3].scrollIntoView();
+    await this.coinSubmission1[3].setValue(coinSubmission4);
+    await this.coinVerification1[3].setValue(coinVerification4);
+    await this.coinSubmission1[4].scrollIntoView();
+    await this.coinSubmission1[4].setValue(coinSubmission5);
+    await this.coinVerification1[4].setValue(coinVerification5);
+    await this.coinSubmission1[5].scrollIntoView();
+    await this.coinSubmission1[5].setValue(coinSubmission6);
+    await this.coinVerification1[5].setValue(coinVerification6);
+    await this.coinSubmission1[6].scrollIntoView();
+    await this.coinSubmission1[6].setValue(coinSubmission7);
+    await this.coinVerification1[6].setValue(coinVerification7);
+    await this.coinSubmission1[7].scrollIntoView();
+    await this.coinSubmission1[7].setValue(coinSubmission8);
+    await this.coinVerification1[7].setValue(coinVerification8);
+    await this.coinSubmission1[8].scrollIntoView();
+    await this.coinSubmission1[8].setValue(coinSubmission9);
+    await this.coinVerification1[8].setValue(coinVerification9);
+    await this.coinSubmission1[9].scrollIntoView();
+    await this.coinSubmission1[9].setValue(coinSubmission10);
+    await this.coinVerification1[9].setValue(coinVerification10);
+    await this.coinSubmission1[10].scrollIntoView();
+    await this.coinSubmission1[10].setValue(coinSubmission11);
+    await this.coinVerification1[10].setValue(coinVerification11);
+    await this.coinSubmission1[11].scrollIntoView();
+    await this.coinSubmission1[11].setValue(coinSubmission12);
+    await this.coinVerification1[11].setValue(coinVerification12);
+    await this.coinSubmission1[12].scrollIntoView();
+    await this.coinSubmission1[12].setValue(coinSubmission13);
+    await this.coinVerification1[12].setValue(coinVerification13);
+    await this.coinSubmission1[13].scrollIntoView();
+    await this.coinSubmission1[13].setValue(coinSubmission14);
+    await this.coinVerification1[13].setValue(coinVerification14);
+  }
+
+  //Scenario 14
+  async setCoin14(
+    coinSubmission1,
+    coinVerification1,
+    coinSubmission2,
+    coinVerification2,
+    coinSubmission3,
+    coinVerification3
+  ) {
+    await this.coinSubmission1[0].scrollIntoView();
+    await this.coinSubmission1[0].setValue(coinSubmission1);
+    await this.coinVerification1[0].setValue(coinVerification1);
+    await this.coinSubmission1[1].scrollIntoView();
+    await this.coinSubmission1[1].setValue(coinSubmission2);
+    await this.coinVerification1[1].setValue(coinVerification2);
+    await this.coinSubmission1[2].scrollIntoView();
+    await this.coinSubmission1[2].setValue(coinSubmission3);
+    await this.coinVerification1[2].setValue(coinVerification3);
   }
 
   //Scenario 16, 17, 18
