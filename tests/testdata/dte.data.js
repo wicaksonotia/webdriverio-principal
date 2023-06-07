@@ -84,7 +84,8 @@ module.exports = {
     searchByName4: "Misi4-Wknd", // Scenario 4
     searchByName5: "Misi5-Wknd", // Scenario 5
     searchByName13: "semua tipe min upc dan IR", //skenario13
-    searchByName14: "link to profile - paragraf, array, angka", //skenario14
+    searchByName14: "link to profile - paragraf, array, angka", //skenario14,15
+    searchByName25: "paragraf, jawaban singkat, array - dengan semua validasi", //skenario25
     searchByName142: "paragraf, jawaban singkat, array - tanpa validasi", //skenario14
     searchByName16: "Test IR Non Cigarette - Planogram Hanifah Wknd", // Scenario 16
     searchByName17: "Task Based 03122020 - Wknd", //Scenario 17, 19
@@ -152,6 +153,7 @@ module.exports = {
     searchByName: "SUB GTP S2",
   },
   tradeProgram: {
+    namaTP2023: "Trade untuk testing weekend 2023",
     namaTP4: "TPTB-HWKND", //Scenario 4, 5: Trade Weekend 05,   Scenario 17: TPTB-Wknd99, TradebaseWknd17
     namaTP16: "HWknd-TPIR2604", //Scenario 16: TradeIRWknd1
     namaTP18: "TPQuizWknd1", //Scenario 18: TradeQuizWknd18, 19: tradequiz123
@@ -494,6 +496,15 @@ module.exports = {
     coinVerification14: "4",
     waktuTunggu: "1",
 
+    //Scenario 15
+    nameTask15: "misi reda checklist",
+    XPSubmission1: "4",
+    XPVerification1: "4",
+    XPSubmission2: "4",
+    XPVerification2: "4",
+    XPSubmission3: "4",
+    XPVerification3: "4",
+
     // Scenario 16 - IR
     nameTask16: "HWKND-TaskIR 2604",
     coinSubmission16: "4", //
@@ -511,6 +522,9 @@ module.exports = {
     //Scenario 19 - Quiz
     nameTask19: "HWKND-TBRPushFF2604",
     coinSubmission19: "1",
+
+    //Scenario 25
+    nameTask25: "misi reda unchecklist",
 
     //Scenario 42
     nameWithPinUp42: "HWKND-Mission XP 2604", //1301:tgl run

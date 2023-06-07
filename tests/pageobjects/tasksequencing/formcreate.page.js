@@ -212,7 +212,7 @@ class FormCreatePage extends Page {
     await this.dropdownTradeProgram.click();
     await this.searchTP.waitForExist();
     await this.searchTP.setValue(tradeProgram);
-    await browser.pause(10000);
+    await browser.pause(12000);
     await this.selectTradeProgram[0].waitForExist();
     await this.selectTradeProgram[0].click();
     await this.searchTP.waitForExist({ reverse: true });
@@ -241,6 +241,12 @@ class FormCreatePage extends Page {
     await this.popUpTimeEnd.waitForExist();
     await this.popUpTimeEnd.$$("div")[9].$("span").click();
     await this.btnTimePicker[1].click();
+    await browser.pause(3000);
+  }
+
+  async editTSM2(nameTSM) {
+    await this.inputNama.addValue("");
+    await this.inputNama.setValue(nameTSM);
     await browser.pause(3000);
   }
 

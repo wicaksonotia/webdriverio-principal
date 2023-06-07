@@ -30,7 +30,7 @@ When(/^I create task sequencing and click button Submit$/, async () => {
   await FormCreatePage.formAddPage();
   await FormCreatePage.createTSM(
     dataTest.taskSequencing.nameTask14,
-    dataTest.tradeProgram.namaTP4,
+    dataTest.tradeProgram.namaTP2023,
     dataTest.audience.audienceToko2
   );
   await FormCreatePage.submitTsm();
@@ -51,13 +51,19 @@ When(/^setting Misi$/, async () => {
   await MissionBuilderPage.settingMissionWithoutPinUp(
     dataTest.templateTugas.searchByName14
   );
-  await MissionBuilderPage.setCoin14(
+  await MissionBuilderPage.setCoin14m1(
     dataTest.taskSequencing.coinSub1,
     dataTest.taskSequencing.coinVer1,
+    dataTest.taskSequencing.XPSubmission1,
+    dataTest.taskSequencing.XPVerification1,
     dataTest.taskSequencing.coinSub2,
     dataTest.taskSequencing.coinVer2,
+    dataTest.taskSequencing.XPSubmission2,
+    dataTest.taskSequencing.XPVerification2,
     dataTest.taskSequencing.coinSub3,
-    dataTest.taskSequencing.coinVer3
+    dataTest.taskSequencing.coinVer3,
+    dataTest.taskSequencing.XPSubmission3,
+    dataTest.taskSequencing.XPVerification3
   );
   await MissionBuilderPage.simpanSettingMission();
   await MissionBuilderPage.waitingPeriod();
@@ -69,7 +75,7 @@ When(/^setting Misi$/, async () => {
   await MissionBuilderPage.settingMissionWithoutPinUp(
     dataTest.templateTugas.searchByName142
   );
-  await MissionBuilderPage.setCoin14(
+  await MissionBuilderPage.setCoin14m2(
     dataTest.taskSequencing.coinSub1,
     dataTest.taskSequencing.coinVer1,
     dataTest.taskSequencing.coinSub2,

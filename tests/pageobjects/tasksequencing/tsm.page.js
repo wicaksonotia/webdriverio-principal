@@ -127,6 +127,16 @@ class TaskSequencingPage extends Page {
     );
   }
 
+  async reqFile() {
+    await this.btnRequestFile.scrollIntoView();
+    await this.btnRequestFile.click();
+    await browser.pause(5000);
+  }
+
+  async reqFile2() {
+    await this.btnRequestFile.scrollIntoView();
+    await browser.pause(10000);
+  }
   async detailTask(taskSequencingName) {
     //click name
     await browser.pause(5000);
@@ -158,6 +168,11 @@ class TaskSequencingPage extends Page {
     await this.btnEdit[0].click();
   }
 
+  async exportTSM() {
+    await this.btnExport.scrollIntoView();
+    await this.btnExport.click();
+    await browser.pause(8000);
+  }
   //overwrite specifc options to adapt it to page object
   open() {
     return super.open("dte/task-sequencing");

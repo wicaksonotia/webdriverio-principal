@@ -10,10 +10,10 @@ const dataTest = require("../../testdata/dte.data");
 // use allure API for allure reporter
 allureReporter.addLabel("Positive Case");
 allureReporter.addTestId(
-  "[PRINCIPAL] 13. Create Task Sequencing Management (semua tipe kecuali UPC dan IR)"
+  "[PRINCIPAL] 25. Edit TSM (Unchecklist checkbox Verification per question)"
 );
 allureReporter.addFeature(
-  "Create Task Sequencing Management (semua tipe kecuali UPC dan IR)"
+  "Edit TSM (Unchecklist checkbox Verification per question)"
 );
 
 Given(/^I am on the Task Sequencing page$/, async () => {
@@ -29,7 +29,7 @@ When(/^I create task sequencing and click button Submit$/, async () => {
   await TaskSequencingPage.createTaskSequencing();
   await FormCreatePage.formAddPage();
   await FormCreatePage.createTSM(
-    dataTest.taskSequencing.nameTask13,
+    dataTest.taskSequencing.nameTask25,
     dataTest.tradeProgram.namaTP2023,
     dataTest.audience.audienceToko2
   );
@@ -49,37 +49,15 @@ When(/^setting Misi$/, async () => {
   await MissionBuilderPage.setMission();
   await MissionBuilderPage.verificationPerQuestion();
   await MissionBuilderPage.settingMissionWithoutPinUp(
-    dataTest.templateTugas.searchByName13
+    dataTest.templateTugas.searchByName25
   );
-  await MissionBuilderPage.setCoin13(
+  await MissionBuilderPage.setCoin25(
     dataTest.taskSequencing.coinSub1,
     dataTest.taskSequencing.coinVer1,
     dataTest.taskSequencing.coinSub2,
     dataTest.taskSequencing.coinVer2,
     dataTest.taskSequencing.coinSub3,
-    dataTest.taskSequencing.coinVer3,
-    dataTest.taskSequencing.coinSub4,
-    dataTest.taskSequencing.coinVer4,
-    dataTest.taskSequencing.coinSub5,
-    dataTest.taskSequencing.coinVer5,
-    dataTest.taskSequencing.coinSub6,
-    dataTest.taskSequencing.coinVer6,
-    dataTest.taskSequencing.coinSub7,
-    dataTest.taskSequencing.coinVer7,
-    dataTest.taskSequencing.coinSub8,
-    dataTest.taskSequencing.coinVer8,
-    dataTest.taskSequencing.coinSub9,
-    dataTest.taskSequencing.coinVer9,
-    dataTest.taskSequencing.coinSub10,
-    dataTest.taskSequencing.coinVer10,
-    dataTest.taskSequencing.coinSub11,
-    dataTest.taskSequencing.coinVer11,
-    dataTest.taskSequencing.coinSub12,
-    dataTest.taskSequencing.coinVer12,
-    dataTest.taskSequencing.coinSub13,
-    dataTest.taskSequencing.coinVer13,
-    dataTest.taskSequencing.coinSub14,
-    dataTest.taskSequencing.coinVer14
+    dataTest.taskSequencing.coinVer3
   );
   await MissionBuilderPage.simpanSettingMission();
 });
@@ -106,6 +84,11 @@ Then(
 );
 When(/^I publish mission builder$/, async () => {
   await MissionBuilderPage.setMissionEdit();
+  await MissionBuilderPage.verificationPerQuestion();
+  await MissionBuilderPage.setCoin25edit(
+    dataTest.taskSequencing.coinSub1,
+    dataTest.taskSequencing.coinVer1
+  );
   await MissionBuilderPage.simpanSettingMission();
   await MissionBuilderPage.publish();
   await MissionBuilderPage.confirmPublish();
@@ -116,13 +99,18 @@ Then(
     await TaskSequencingPage.page();
   }
 );
-When(/^I view detail task$/, async () => {
-  await TaskSequencingPage.detailTask(dataTest.taskSequencing.nameTask13);
-  await FormCreatePage.page();
-  await FormCreatePage.formDetailPage();
-  await FormCreatePage.cekDetail();
+When(/^I request file and export task sequencing$/, async () => {
+  await TaskSequencingPage.searchTaskSequencing(
+    dataTest.taskSequencing.nameTask25
+  );
+  await TaskSequencingPage.reqFile();
 });
-Then(/^System should be show detail mission$/, async () => {
-  await MissionBuilderPage.page();
-  await MissionBuilderPage.pageDetail();
+Then(/^System should be request data and export task sequencing$/, async () => {
+  await TaskSequencingPage.open();
+  await LoginPage.acceptCookie();
+  await TaskSequencingPage.searchTaskSequencing(
+    dataTest.taskSequencing.nameTask25
+  );
+  await TaskSequencingPage.reqFile2();
+  await TaskSequencingPage.exportTSM();
 });

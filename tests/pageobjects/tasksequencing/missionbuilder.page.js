@@ -166,10 +166,10 @@ class MissionBuilderPage extends Page {
     return $$('[formcontrolname="coin_verification"]');
   }
   get XPSubmission() {
-    return $('[placeholder="XP Submission"]');
+    return $$('[placeholder="XP Submission"]');
   }
   get XPVerification() {
-    return $('[placeholder="XP Verification"]');
+    return $$('[placeholder="XP Verification"]');
   }
   get btnSimpanSetMisi() {
     return $("#btn-submit-card-mission");
@@ -431,7 +431,115 @@ class MissionBuilderPage extends Page {
   }
 
   //Scenario 14
-  async setCoin14(
+  async setCoin14m1(
+    coinSubmission1,
+    coinVerification1,
+    XPSub1,
+    XPVerif1,
+    coinSubmission2,
+    coinVerification2,
+    XPSub2,
+    XPVerif2,
+    coinSubmission3,
+    coinVerification3,
+    XPSub3,
+    XPVerif3
+  ) {
+    await this.coinSubmission1[0].scrollIntoView();
+    await this.coinSubmission1[0].setValue(coinSubmission1);
+    await this.coinVerification1[0].setValue(coinVerification1);
+    await this.XPSubmission[0].setValue(XPSub1);
+    await this.XPVerification[0].setValue(XPVerif1);
+    await this.coinSubmission1[1].scrollIntoView();
+    await this.coinSubmission1[1].setValue(coinSubmission2);
+    await this.coinVerification1[1].setValue(coinVerification2);
+    await this.XPSubmission[1].setValue(XPSub2);
+    await this.XPVerification[1].setValue(XPVerif2);
+    await this.coinSubmission1[2].scrollIntoView();
+    await this.coinSubmission1[2].setValue(coinSubmission3);
+    await this.coinVerification1[2].setValue(coinVerification3);
+    await this.XPSubmission[2].setValue(XPSub3);
+    await this.XPVerification[2].setValue(XPVerif3);
+  }
+
+  //Scenario 14
+  async setCoin14m2(
+    coinSubmission1,
+    coinVerification1,
+    coinSubmission2,
+    coinVerification2,
+    coinSubmission3,
+    coinVerification3
+  ) {
+    await this.coinSubmission1[0].scrollIntoView();
+    await this.coinSubmission1[0].setValue(coinSubmission1);
+    await this.coinVerification1[0].setValue(coinVerification1);
+    await this.coinSubmission1[1].scrollIntoView();
+    await this.coinSubmission1[1].setValue(coinSubmission2);
+    await this.coinVerification1[1].setValue(coinVerification2);
+    await this.coinSubmission1[2].scrollIntoView();
+    await this.coinSubmission1[2].setValue(coinSubmission3);
+    await this.coinVerification1[2].setValue(coinVerification3);
+  }
+  //Scenario 15
+
+  async setCoin15m1(coinSubmission1, coinVerification1) {
+    await this.coinSubmission1[0].scrollIntoView();
+    await this.coinSubmission1[0].setValue(coinSubmission1);
+    await this.coinVerification1[0].setValue(coinVerification1);
+  }
+
+  async setCoin15m2(
+    coinSubmission1,
+    coinVerification1,
+    XPSubmission1,
+    XPVerification1,
+    coinSubmission2,
+    coinVerification2,
+    XPSubmission2,
+    XPVerification2,
+    coinSubmission3,
+    coinVerification3,
+    XPSubmission3,
+    XPVerification3
+  ) {
+    await this.coinSubmission1[0].scrollIntoView();
+    await this.coinSubmission1[0].setValue(coinSubmission1);
+    await this.coinVerification1[0].setValue(coinVerification1);
+    await this.XPSubmission[0].scrollIntoView();
+    await this.XPSubmission[0].setValue(XPSubmission1);
+    await this.XPVerification[0].setValue(XPVerification1);
+    await this.coinSubmission1[1].scrollIntoView();
+    await this.coinSubmission1[1].setValue(coinSubmission2);
+    await this.coinVerification1[1].setValue(coinVerification2);
+    await this.XPSubmission[1].scrollIntoView();
+    await this.XPSubmission[1].setValue(XPSubmission2);
+    await this.XPVerification[1].setValue(XPVerification2);
+    await this.coinSubmission1[2].scrollIntoView();
+    await this.coinSubmission1[2].setValue(coinSubmission3);
+    await this.coinVerification1[2].setValue(coinVerification3);
+    await this.XPSubmission[2].scrollIntoView();
+    await this.XPSubmission[2].setValue(XPSubmission3);
+    await this.XPVerification[2].setValue(XPVerification3);
+  }
+
+  //Scenario 16, 17, 18
+  async setVerifikasiManual() {
+    await this.verifikasiManual.waitForClickable();
+    await this.verifikasiManual.click();
+  }
+  //Scenario 18
+  async setCoinSubmission(coinSubmission) {
+    await this.coinSubmission.setValue(coinSubmission);
+  }
+  //Scenario 16, 17
+  async setCoin(coinSubmission, coinVerification) {
+    await this.coinSubmission.setValue(coinSubmission);
+    await this.coinVerification.setValue(coinVerification);
+  }
+
+  //Scenario 25
+  async setCoin25(
     coinSubmission1,
     coinVerification1,
     coinSubmission2,
@@ -450,19 +558,11 @@ class MissionBuilderPage extends Page {
     await this.coinVerification1[2].setValue(coinVerification3);
   }
 
-  //Scenario 16, 17, 18
-  async setVerifikasiManual() {
-    await this.verifikasiManual.waitForClickable();
-    await this.verifikasiManual.click();
-  }
-  //Scenario 18
-  async setCoinSubmission(coinSubmission) {
-    await this.coinSubmission.setValue(coinSubmission);
-  }
-  //Scenario 16, 17
-  async setCoin(coinSubmission, coinVerification) {
-    await this.coinSubmission.setValue(coinSubmission);
-    await this.coinVerification.setValue(coinVerification);
+  //Scenario 25
+  async setCoin25edit(coinSubmission1, coinVerification1) {
+    await this.coinSubmission1[0].scrollIntoView();
+    await this.coinSubmission1[0].setValue(coinSubmission1);
+    await this.coinVerification1[0].setValue(coinVerification1);
   }
 
   //Scenario 42
@@ -472,6 +572,7 @@ class MissionBuilderPage extends Page {
   }
 
   async simpanSettingMission() {
+    await this.btnSimpanSetMisi.scrollIntoView();
     await this.btnSimpanSetMisi.waitForClickable();
     await expect(this.btnSimpanSetMisi).toBeClickable();
     await this.btnSimpanSetMisi.click();

@@ -158,7 +158,9 @@ exports.config = {
     //"./tests/features/tradeprogram/90editbudget-tradeprogram.feature",
     // './tests/features/templatetugas/5createtemplatetugas(paragraph).feature'
     //'./tests/features/tasksequencing/13createtsm-semuatipe-kecualiirdanupc.feature'
-    './tests/features/tasksequencing/14createtsm-reblastoff-lebihdari1misi.feature'
+    //'./tests/features/tasksequencing/14createtsm-reblastoff-lebihdari1misi.feature'
+    // './tests/features/tasksequencing/15edittsm(checklist-checkbox-verification-perquestion).feature'
+    './tests/features/tasksequencing/25edittsm(unchecklist-checkbox-verification-perquestion).feature'
     // tiawicaksono
     // './tests/features/kpisetting/63kpisetting.feature'
     //"./tests/features/kpisetting/5321kpigrouplist.feature",
@@ -467,8 +469,10 @@ exports.config = {
       //'./tests/step-definitions/subgtp/97editsgpt2.js'
       //"./tests/step-definitions/tradeprogram/90editbudget-tradeprogram.js",
       // './tests/step-definitions/templatetugas/5createtemplatetugas(paragraph).js'
-      //  './tests/step-definitions/tasksequencing/13createtsm-semuatipe-kecualiirdanupc.js'
-      './tests/step-definitions/tasksequencing/14createtsm-reblastoff-lebihdari1misi.js'
+      // './tests/step-definitions/tasksequencing/13createtsm-semuatipe-kecualiirdanupc.js'
+      //'./tests/step-definitions/tasksequencing/14createtsm-reblastoff-lebihdari1misi.js'
+      //'./tests/step-definitions/tasksequencing/15edittsm(checklist-checkbox-verification-perquestion).js'
+      './tests/step-definitions/tasksequencing/25edittsm(unchecklist-checkbox-verification-perquestion).js'
       // tiawicaksono
       // './tests/step-definitions/kpisetting/63kpisetting.js'
       //"./tests/step-definitions/kpisetting/5321kpigrouplist.js",
